@@ -13,6 +13,8 @@ wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
 
 unzip master
 
+rm master
+
 cd rpi-multiroom-setup-master
 
 sudo chmod 755 install.sh
