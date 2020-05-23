@@ -1,9 +1,0 @@
-stream = pipe:///tmp/fifo0?name=eins&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo0?name=eins&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo1?name=zwi&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo0?name=einm&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo1?name=zwei&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo0?name=eins&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo1?name=zwei&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo0?name=eins&mode=read&sampleformat=44100:16:2
-stream = pipe:///tmp/fifo1?name=zweo&mode=read&sampleformat=44100:16:2
