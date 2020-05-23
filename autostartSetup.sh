@@ -30,3 +30,4 @@ sudo chmod 755 /etc/autostart.sh
 
 echo "" > ./res/snapserver/2_streams
 echo "" > /etc/asound.conf
+
