@@ -6,14 +6,17 @@ Please be aware: this is an early stage.
 
 It is not fully tested!
 
+Recommended with fresh install of raspbian buster lite.
 
 How to use:
+Just copy everything below into ssh session (e.g. putty with left click)
+Then follow instructions in console.
 
 wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
 
-unzip master
+unzip master.zip
 
-rm master
+rm master.zip
 
 cd rpi-multiroom-setup-master
 
