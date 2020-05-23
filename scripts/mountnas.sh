@@ -15,3 +15,4 @@ echo
 sudo mount -t cifs  $mount /mnt/share -o user=$user,password=$pwd,vers=1.0
 su pi
 
+

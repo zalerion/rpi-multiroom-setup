@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 if [ "$1" = "yes" ]; then 
 echo "writing snapserver.conf"
 cd ./res/snapserver 
@@ -9,3 +9,4 @@ fi
 
 
 echo "snapserver configured"
+

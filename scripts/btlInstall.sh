@@ -23,3 +23,4 @@ if [ $server = "yes" ]; then
 sudo ./btlSetup.sh
 fi
 
+

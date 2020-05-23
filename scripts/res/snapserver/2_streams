@@ -1,2 +1,5 @@
 
-stream = pipe:///tmp/fifo0?name=1&mode=read&sampleformat=44100:16:2
+stream = pipe:///tmp/fifo0?name=s&mode=read&sampleformat=44100:16:2
+stream = pipe:///tmp/fifo1?name=a&mode=read&sampleformat=44100:16:2
+stream = pipe:///tmp/fifo2?name=c&mode=read&sampleformat=44100:16:2
+stream = pipe:///tmp/bluesnapfifo?name=BluetoothStream&sampleformat=44100:16:2

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 
 sudo rm /etc/asound.conf
@@ -41,13 +42,14 @@ sudo chmod 755 mountnas.sh
 sudo chmod 755 setTimeSync.sh
 sudo chmod 755 autostartSetup.sh
 
-#sudo ./autostartSetup.sh
-#sudo ./setTimeSync.sh
-#sudo ./snapserver.sh $server $mpd
-#sudo ./mpd.sh $server $mpd #also calls the mpdSetup
-#sudo ./snapclient.sh
-#sudo ./snapfinish.sh
-#sudo ./btlInstall.sh $server
+sudo ./autostartSetup.sh
+sudo ./setTimeSync.sh
+sudo ./snapserver.sh $server $mpd
+sudo ./mpd.sh $server $mpd #also calls the mpdSetup
+sudo ./snapclient.sh
+sudo ./snapfinish.sh
+sudo ./btlInstall.sh $server
 sudo ./snapserverconf.sh "$server"
 sudo ./mountnas.sh
+
 

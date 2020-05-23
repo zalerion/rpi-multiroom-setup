@@ -1,0 +1,13 @@
+
+bak/snapserverconf.sh
+bak/snapserver.sh
+bak/snapfinish.sh
+bak/snapclient.sh
+bak/setTimeSync.sh
+bak/mpdSetup.sh
+bak/mpd.sh
+bak/mountnas.sh
+bak/install.sh
+bak/btlSetup.sh
+bak/btlInstall.sh
+bak/autostartSetup.sh

@@ -34,3 +34,4 @@ fi
 echo "Setting up your MPD servers now"
 
 sudo ./mpdSetup.sh $1 $2
+
