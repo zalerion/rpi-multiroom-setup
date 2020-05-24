@@ -1,2 +1,2 @@
-	name            "two"
-	path            "/tmp/fifo2"
+	name            "one"
+	path            "/tmp/fifo1"
