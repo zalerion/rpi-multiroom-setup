@@ -1,5 +1,5 @@
 # rpi-multiroom-setup
-Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapserver and mpd, with optional Bluetooth.
+Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapserver and mpd.
 
 
 Please be aware: this is an early stage.
