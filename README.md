@@ -16,14 +16,21 @@ How to use:
 Just copy everything below into ssh session (e.g. putty with right click)
 Then follow instructions in console.
 
-wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
+> wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
 
-unzip master.zip
+> unzip master.zip
 
-rm master.zip
+> rm master.zip 
 
-cd rpi-multiroom-setup-master
+> cd rpi-multiroom-setup-master
 
-sudo chmod 755 install.sh
+> sudo chmod 755 install.sh
 
-sudo ./install.sh
+> sudo ./install.sh
+
+
+
+### Planned
+
+* setup hostname
+* setup wifi
