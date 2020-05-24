@@ -16,7 +16,7 @@ rm snapclient_0.19.0-1_armhf.deb
 #setup
 
 sudo systemctl disable snapclient.service
-echo "snapclient -s snapclient" >> /etc/autostart.sh
+echo "snapclient -s snapclient &" >> /etc/autostart.sh
 cat <<EOM >> /etc/asound.conf
 ###############################################################################
 #
