@@ -7,6 +7,10 @@ Please be aware: this is an early stage.
 It is not fully tested!
 
 Recommended with fresh install of raspbian buster lite.
+Will overwrite/delete preexisting configurations for used modules, including (e.g.):
+mpd.conf
+snapserver.conf
+asound.conf
 
 How to use:
 Just copy everything below into ssh session (e.g. putty with right click)
