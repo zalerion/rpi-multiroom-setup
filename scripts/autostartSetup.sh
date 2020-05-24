@@ -18,15 +18,15 @@ cat <<EOM > /etc/rc.local
 #if [ "$_IP" ]; then
 #  printf "My IP address is %s\n" "$_IP"
 #fi
-
 '/etc/autostart.sh'
-
+'/etc/automount.sh'
 exit 0
 
 EOM
 
 echo "" > /etc/autostart.sh
 sudo chmod 755 /etc/autostart.sh
+sudo touch /etc/automount.sh
 
 echo "" > ./res/snapserver/2_streams
 echo "" > /etc/asound.conf
