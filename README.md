@@ -9,7 +9,7 @@ It is not fully tested!
 Recommended with fresh install of raspbian buster lite.
 
 How to use:
-Just copy everything below into ssh session (e.g. putty with left click)
+Just copy everything below into ssh session (e.g. putty with right click)
 Then follow instructions in console.
 
 wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
