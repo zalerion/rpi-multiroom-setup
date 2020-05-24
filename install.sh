@@ -47,13 +47,13 @@ sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
 
 sudo ./autostartSetup.sh
-sudo ./setTimeSync.sh
 sudo ./snapserver.sh $server $mpd
-sudo ./mpd.sh $server $mpd #also calls the mpdSetup
 sudo ./snapclient.sh
 sudo ./snapfinish.sh
+sudo ./mpd.sh $server $mpd #also calls the mpdSetup
 sudo ./btlInstall.sh $server
 sudo ./snapserverconf.sh $server
+sudo ./setTimeSync.sh
 sudo ./mountnas.sh
 
 
