@@ -26,7 +26,7 @@ sudo apt-get install mpd --yes
 read -p "mpd installed"
 
 
-if [[ "$2" == "1" ]]; then
+if [[ ! "$2" == "1" ]]; then
   sudo systemctl stop mpd
   sudo systemctl disable mpd
 fi
