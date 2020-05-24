@@ -53,7 +53,7 @@ sudo ./mpd.sh $server $mpd #also calls the mpdSetup
 sudo ./snapclient.sh
 sudo ./snapfinish.sh
 sudo ./btlInstall.sh $server
-sudo ./snapserverconf.sh "$server"
+sudo ./snapserverconf.sh $server
 sudo ./mountnas.sh
 
 

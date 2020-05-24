@@ -49,7 +49,7 @@ EOM
 		path="/etc/mpd$i.conf" #path to new mpdX.conf file
 		cd ./res/mpd
 		cat 1 2_state 3 4_port 5 6_fifo 7 8_rpgain 9 > $path
-		echo "sudo mpd $Path" >> /etc/autostart.sh
+		echo "sudo mpd $path" >> /etc/autostart.sh
 		cd ..
 		cd ..
         done
