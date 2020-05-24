@@ -1,0 +1,47 @@
+#EXTM3U
+
+#EXTINF:-1,1live
+http://wdr-1live-live.icecast.wdr.de/wdr/1live/live/mp3/128/stream.mp3
+
+#EXTINF:-1,KTL-Oldieradio
+https://server8714.streamplus.de/stream.mp3
+
+#EXTINF:-1,N-Joy
+http://ndr-njoy-live.cast.addradio.de/ndr/njoy/live/mp3/128/stream.mp3
+
+#EXTINF:-1, Rockantenne
+http://stream.rockantenne.de/rockantenne
+
+#EXTINF:-1, Rockantenne Heavy Metal
+https://stream.rockantenne.de/heavy-metal/stream/mp3
+
+#EXTINF:-1,Rockantenne Alternative
+https://stream.rockantenne.de/alternative/stream/mp3
+
+#EXTINF:-1,Lagrosseradio Rock
+http://ice1.lagrosseradio.info:8000/lagrosseradio-rock-048.aac
+
+#EXTINF:-1,Classic 21 (Oldies, Classic Rock)
+http://radios.rtbf.be/classic21-128.mp3
+
+#EXTINF:-1,Musiq3 (Classic)
+http://radios.rtbf.be/musiq3-128.mp3      
+
+#EXTINF:-1,Pure FM (Charts)
+http://radios.rtbf.be/pure-128.mp3
+
+#EXTINF:-1,Pure Like (Alternative)
+https://radios.rtbf.be/wr-pure2-128.mp3
+
+#EXTINF:-1,RTL Berlin (Hitradio)
+http://stream.104.6rtl.com/rtl-live/mp3-192
+
+#EXTINF:-1,N - 2000s on Radio ON 2000s
+http://0n-2000s.radionetz.de/0n-2000s.mp3
+
+#EXTINF:-1,N - Black on Radio ON Black
+http://0n-black.radionetz.de/0n-black.mp3
+
+#RADIOBROWSERUUID:3b5438eb-0c6c-11e9-a80b-52543be04c81
+#EXTINF:-1,Cro Jazz
+http://icecast4.play.cz/crojazz256.mp3
