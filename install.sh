@@ -49,7 +49,7 @@ sudo chmod 755 mountnas.sh
 sudo ./autostartSetup.sh
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh
-sudo ./snapfinish.sh
+#sudo ./snapfinish.sh
 sudo ./mpd.sh $server $mpd #also calls the mpdSetup
 sudo ./btlInstall.sh $server
 sudo ./snapserverconf.sh $server

@@ -11,3 +11,8 @@ bak/install.sh
 bak/btlSetup.sh
 bak/btlInstall.sh
 bak/autostartSetup.sh
+scripts/res/snapserver/2_streams
+scripts/res/mpd/8_rpgain
+scripts/res/mpd/6_fifo
+scripts/res/mpd/4_port
+scripts/res/mpd/2_state
