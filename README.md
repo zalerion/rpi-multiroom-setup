@@ -16,11 +16,11 @@ How to use:
 Just copy everything below into ssh session (e.g. putty with right click)
 Then follow instructions in console.
 
-> wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
+> sudo wget https://github.com/zalerion/rpi-multiroom-setup/archive/master.zip
 
-> unzip master.zip
+> sudo unzip master.zip
 
-> rm master.zip 
+> sudo rm master.zip 
 
 > cd rpi-multiroom-setup-master
 
