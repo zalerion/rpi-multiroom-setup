@@ -32,7 +32,9 @@ Then follow instructions in console.
 ## Used software and scripts to make this possible:
 
 https://github.com/badaix/snapcast
+
 https://github.com/MusicPlayerDaemon/MPD
+
 https://github.com/nicokaiser/rpi-audio-receiver
 
 
