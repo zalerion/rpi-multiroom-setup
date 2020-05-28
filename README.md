@@ -8,8 +8,8 @@ It is not fully tested!
 
 Recommended with fresh install of raspbian buster lite.
 Will overwrite/delete preexisting configurations for used modules, including (e.g.):
-mpd.conf
-snapserver.conf
+mpd.conf,
+snapserver.conf,
 asound.conf
 
 How to use:
