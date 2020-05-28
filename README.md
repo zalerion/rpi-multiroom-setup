@@ -28,6 +28,9 @@ Then follow instructions in console.
 
 > sudo ./install.sh
 
+when everything is done, reboot:
+
+> sudo reboot
 
 ## Used software and scripts to make this possible:
 
