@@ -1,1 +1,0 @@
-stream = pipe:///tmp/bluesnapfifo?name=BluetoothStream&sampleformat=44100:16:2
