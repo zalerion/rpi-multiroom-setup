@@ -45,6 +45,10 @@ sudo chmod 755 btlInstall.sh
 sudo chmod 755 btlSetup.sh
 sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
+sudo chmod 755 rpi-audio-receiver-master/hostnames.sh
+sudo chmod 755 rpi-audio-receiver-master/install-bluetooth.sh
+sudo chmod 755 rpi-audio-receiver-master/install-spotify.sh
+sudo chmod 755 rpi-audio-receiver-master/install-startup-sound.sh
 
 sudo ./autostartSetup.sh
 sudo ./snapserver.sh $server $mpd
