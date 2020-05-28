@@ -44,5 +44,5 @@ https://github.com/nicokaiser/rpi-audio-receiver
 * setup wifi
 * setup a spotify speaker
 * setup automatic reboot
-
+* consolidated selections for faster / easier setup
 
