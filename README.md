@@ -29,8 +29,18 @@ Then follow instructions in console.
 > sudo ./install.sh
 
 
+## Used software and scripts to make this possible:
+
+https://github.com/badaix/snapcast
+https://github.com/MusicPlayerDaemon/MPD
+https://github.com/nicokaiser/rpi-audio-receiver
+
 
 ### Planned
 
 * setup hostname
 * setup wifi
+* setup a spotify speaker
+* setup automatic reboot
+
+
