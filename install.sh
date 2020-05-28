@@ -51,6 +51,7 @@ sudo chmod 755 rpi-audio-receiver-master/install-spotify.sh
 sudo chmod 755 rpi-audio-receiver-master/install-startup-sound.sh
 
 sudo ./autostartSetup.sh
+sudo ./mountnas.sh
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh
 #sudo ./snapfinish.sh
@@ -58,6 +59,5 @@ sudo ./mpd.sh $server $mpd #also calls the mpdSetup
 sudo ./btlInstall.sh $server
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
-sudo ./mountnas.sh
 
 
