@@ -93,7 +93,7 @@ sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh $sclient
-sudo ./btlInstall.sh $server $btl
+sudo ./btlInstall.sh $btl
 sudo ./btlSetup.sh $server $btl
 
 sudo apt update
