@@ -7,6 +7,9 @@ echo "BTL SETUP"
 echo "stream = pipe:///tmp/bluesnapfifo?name=BluetoothStream&sampleformat=44100:16:2" >> ./res/snapserver/2_streams
 #rm tmp
 
+sudo apt-get update
+sudo apt-get upgrade --yes
+
 cat <<EOM >> /etc/asound.conf
 ###########################################################################
 #
