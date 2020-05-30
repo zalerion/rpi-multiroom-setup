@@ -18,8 +18,8 @@ cat <<EOM > /etc/rc.local
 #if [ "$_IP" ]; then
 #  printf "My IP address is %s\n" "$_IP"
 #fi
-'/etc/automount.sh'
-'/etc/autostart.sh'
+'/etc/automount.sh' &
+'/etc/autostart.sh' &
 exit 0
 
 EOM
