@@ -43,6 +43,7 @@ https://github.com/nicokaiser/rpi-audio-receiver
 
 ### Planned
 
+* selection of audio output
 * setup hostname
 * setup wifi
 * setup a spotify speaker
