@@ -105,3 +105,4 @@ sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
 
 
+sudo reboot
