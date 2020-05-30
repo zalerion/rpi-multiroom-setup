@@ -95,7 +95,11 @@ sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh $sclient
 sudo ./btlInstall.sh $server $btl
 sudo ./btlSetup.sh $server $btl
-sudo ./mpd.sh $server $mpd #also calls the mpdSetup
+
+sudo apt update
+sudo apt upgrade --yes
+
+sudo ./mpd.sh $server $mpd 
 sudo ./mpdSetup.sh $server $mpd
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
