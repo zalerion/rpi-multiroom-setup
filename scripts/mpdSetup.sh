@@ -3,6 +3,8 @@
 server="$1" 	# yes / no
 mpd="$2"	# number mpd servers
 
+if [ $mpd = "no" ];then exit 0; fi
+
 echo "Basic setup for mpd: library in /mnt/share. All rights without password."
 read -p "Change later if needed. [OK/Enter]" dump
 
@@ -59,4 +61,9 @@ EOM
 #cleanup
 fi
 
+if [ $mpd = "1" ]; then 
+	read -p "Your MPD server uses the standard port of 6600 [OK/OK]" dump
+else
+	read -p "Ports range from 6600 to $((6600-1+$2)) [OK/OK]" dump
+fi
 
