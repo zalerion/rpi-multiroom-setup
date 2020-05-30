@@ -18,7 +18,7 @@ cd rpi-audio-receiver-master
 sudo ./install-bluetooth.sh
 
 cd ..
-rm -r rpi-audio-receiver-master
+#rm -r rpi-audio-receiver-master
 
 #if [ $server = "yes" ]; then
 #sudo ./btlSetup.sh
