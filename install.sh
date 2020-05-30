@@ -51,7 +51,7 @@ elif [ $REP = "2" ];then
 
 
 	read -p "Would you like to also use this pi as snapclient? [y/N] " REP
-	if [[ $REP =~ ^(yes|y|Y)$ ]]; then server="yes"; fi
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then sclient="yes"; fi
 
 fi
 
