@@ -94,7 +94,7 @@ sudo ./mountnas.sh $oclient
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh $sclient
 
-read -p "btl=$btl, server=$server"
+#read -p "btl=$btl, server=$server"
 sudo ./btlInstall.sh $btl
 sudo ./btlSetup.sh $server $btl
 
