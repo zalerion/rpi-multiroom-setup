@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo
-echo -n "Do you want to install Snapclient v0.19.0? [y/N] "
-read REPLY
-if [[ ! "$REPLY" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
+#echo
+#echo -n "Do you want to install Snapclient v0.19.0? [y/N] "
+#read REPLY
+if [[ ! "$1" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 
 
 

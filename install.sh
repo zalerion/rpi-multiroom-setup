@@ -2,37 +2,75 @@
 
 if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 
-sudo rm /etc/asound.conf
+#sudo rm /etc/asound.conf
 ##starting with clean asound.conf
 
 
-server='no'
-mpd="1"
-read -p "Do you want to setup the Pi as Snapserver [y/N] " REPLY
-#if [[ "$REPLY" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
-if [[ "$REPLY" =~ ^(yes|y|Y)$ ]]; then
-	server='yes'; 
-	read -p "Do you want to stream from multiple MPD servers?  [y/N] " REPLY
-	if [[ "$REPLY" =~ ^(yes|y|Y)$ ]]; then 
-		 read -p "How many? [2-80] " REPLY
-		mpd=$REPLY
-		if [[ ( 1 < "$mpd" ) && "$mpd"  < 81 ]]; 
-		then
-			read -p "mkay"
-		else
-			if [[ 1 == "$mpd" ]]
-			then
-				echo "This are not multiple servers. This could have been easier for you!"
-			else
-				read -p "Nope! Try again! [OK, I'll learn to read]"
-				exit 0;
-			fi
+server="no"
+mpd="no"
+sclient="no"
+oclient="no"
+btl="no"
+####################################################################
+#
+#choices
+#
+####################################################################
+
+echo "Choose your setup:"
+echo
+echo "[1] Only snapclient (select this option for a multiroom speaker)"
+echo "[2] Audio server (select for local server or multiroom server setups) "
+echo
+read -p "Please choose this systems general purpose [1/2]" REP
+
+if [ $REP = "1" ];then
+	echo
+	sclient="yes"
+	oclient="yes"
+elif [ $REP = "2" ];then
+	echo
+
+	read -p "Would you like to set up this pi as snapserver? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then server="yes"; fi
+
+	read -p "Would you like to set up MPD? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then 
+		mpd="yes";
+		if [ $server = "yes" ];then
+			read -p "How many MPD instances? [1-80] " REP
+			mpd=$REP
 		fi
 	fi
 
+
+	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
+	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; fi
+
+
+
+	read -p "Would you like to also use this pi as snapclient? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then sclient="yes"; fi
+
 fi
+
+
+
+
+
+
+
+#read -p "debug"
+
+
+####################################################################
+#
+#installation
+#
+####################################################################
+
 cd scripts
-##echo " $((42-mpd))"
 
 sudo chmod 755 autostartSetup.sh
 sudo chmod 755 setTimeSync.sh
@@ -40,24 +78,35 @@ sudo chmod 755 snapserver.sh
 sudo chmod 755 mpd.sh
 sudo chmod 755 mpdSetup.sh
 sudo chmod 755 snapclient.sh
-sudo chmod 755 snapfinish.sh
 sudo chmod 755 btlInstall.sh
 sudo chmod 755 btlSetup.sh
 sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
-sudo chmod 755 rpi-audio-receiver-master/hostnames.sh
-sudo chmod 755 rpi-audio-receiver-master/install-bluetooth.sh
-sudo chmod 755 rpi-audio-receiver-master/install-spotify.sh
-sudo chmod 755 rpi-audio-receiver-master/install-startup-sound.sh
+cd rpi-audio-receiver-master
+sudo chmod 755 hostnames.sh
+sudo chmod 755 install-bluetooth.sh
+sudo chmod 755 install-spotify.sh
+sudo chmod 755 install-startup-sound.sh
+cd ..
 
 sudo ./autostartSetup.sh
-sudo ./mountnas.sh
+sudo ./mountnas.sh $oclient
 sudo ./snapserver.sh $server $mpd
-sudo ./snapclient.sh
-#sudo ./snapfinish.sh
-sudo ./mpd.sh $server $mpd #also calls the mpdSetup
-sudo ./btlInstall.sh $server
+sudo ./snapclient.sh $sclient
+
+#read -p "btl=$btl, server=$server"
+sudo ./btlInstall.sh $btl
+sudo ./btlSetup.sh $server $btl
+
+#sudo apt update
+#sudo apt upgrade --yes
+
+sudo ./mpd.sh $server $mpd 
+sudo ./mpdSetup.sh $server $mpd
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
 
-
+echo
+echo
+read -p "The system will reboot now [Ok]"
+sudo reboot

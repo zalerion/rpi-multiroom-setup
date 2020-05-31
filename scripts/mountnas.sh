@@ -1,4 +1,5 @@
 #!/bin/bash
+if [ $1 = yes ]; then exit 0; fi
 echo
 echo "Mount a network share. Tested for fritz box nas. If it is not working, you have to do it manually."
 read -p "This is possibly wonky. Do you want to try it anyways? (y/N)" go

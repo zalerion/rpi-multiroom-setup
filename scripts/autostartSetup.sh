@@ -18,8 +18,8 @@ cat <<EOM > /etc/rc.local
 #if [ "$_IP" ]; then
 #  printf "My IP address is %s\n" "$_IP"
 #fi
-'/etc/automount.sh'
-'/etc/autostart.sh'
+'/etc/automount.sh' &
+'/etc/autostart.sh' &
 exit 0
 
 EOM
@@ -33,7 +33,8 @@ echo "" > /etc/asound.conf
 
 
 echo "please setup the raspi wifi"
-echo "you have to set your country for bluetooth to work"
+echo 
+echo "You have to set your country for bluetooth to work"
 echo "If you want to use bluetooth, you should connect your pi server with a lan cable"
 echo
 read -p "Choose Network Options -> Wireless Lan and follow the instructions" dump
