@@ -4,7 +4,7 @@ Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapse
 
 Please be aware: this is an early stage.
 
-It is not fully tested!
+Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
 
 Recommended with fresh install of raspbian buster lite.
 Will overwrite/delete preexisting configurations for used modules, including (e.g.):
