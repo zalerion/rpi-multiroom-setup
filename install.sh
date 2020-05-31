@@ -106,5 +106,7 @@ sudo ./mpdSetup.sh $server $mpd
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
 
-
+echo
+echo
+read -p "The system will reboot now [Ok]"
 sudo reboot
