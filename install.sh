@@ -98,8 +98,8 @@ sudo ./snapclient.sh $sclient
 sudo ./btlInstall.sh $btl
 sudo ./btlSetup.sh $server $btl
 
-sudo apt update
-sudo apt upgrade --yes
+#sudo apt update
+#sudo apt upgrade --yes
 
 sudo ./mpd.sh $server $mpd 
 sudo ./mpdSetup.sh $server $mpd
