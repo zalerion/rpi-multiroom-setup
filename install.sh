@@ -45,7 +45,7 @@ elif [ $REP = "2" ];then
 
 
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
-	read -p "Do you want to setup the bluetooth receiver? [y/N] " REPLY
+	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; fi
 
 
