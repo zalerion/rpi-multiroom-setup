@@ -92,7 +92,7 @@ cd ..
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient
 sudo ./snapserver.sh $server $mpd
-sudo ./snapclient.sh $sclient
+sudo ./snapclient.sh $sclient $oclient
 
 #read -p "btl=$btl, server=$server"
 sudo ./btlInstall.sh $btl
