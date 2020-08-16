@@ -38,6 +38,15 @@ https://github.com/MusicPlayerDaemon/MPD
 https://github.com/nicokaiser/rpi-audio-receiver
 
 
+### Implemented
+* Setup of mdp
+* Setup as bluetooth receiver
+* Setup of snapcast client and server
+* Setup of time sync for use of multiple PI
+* Setup for autostarting everything on boot
+* Convenient option to mount a network share (fritz nas)
+
+
 ### Planned
 
 * selection of audio output
@@ -45,5 +54,4 @@ https://github.com/nicokaiser/rpi-audio-receiver
 * setup wifi
 * setup a spotify speaker
 * setup automatic reboot
-* <s>consolidated selections for faster / easier setup</s>
 * add choices for samplerate
