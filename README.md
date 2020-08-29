@@ -55,3 +55,4 @@ https://github.com/nicokaiser/rpi-audio-receiver
 * setup a spotify speaker
 * setup automatic reboot
 * add choices for samplerate
+* add choice for mopidy instead of mpd
