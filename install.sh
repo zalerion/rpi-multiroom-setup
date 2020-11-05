@@ -6,11 +6,11 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 ##starting with clean asound.conf
 
 
-server="no"
-mpd="no"
-sclient="no"
-oclient="no"
-btl="no"
+server="no"	#setup as server yes/no
+mpd="no"	#setup mpd yes/no
+sclient="no" 	#setup of snapclient yes/no
+oclient="no" 	#option for "only only as client" setup
+btl="no"	##setup the bluetooth receiver yes/no
 ####################################################################
 #
 #choices
@@ -70,6 +70,10 @@ fi
 #
 ####################################################################
 
+
+##################
+#rights
+##################
 cd scripts
 
 sudo chmod 755 autostartSetup.sh
@@ -88,6 +92,11 @@ sudo chmod 755 install-bluetooth.sh
 sudo chmod 755 install-spotify.sh
 sudo chmod 755 install-startup-sound.sh
 cd ..
+
+
+##################
+#calling actual install and config scripts
+##################
 
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient
