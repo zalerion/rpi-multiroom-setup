@@ -11,6 +11,7 @@ mpd="no"	#setup mpd yes/no
 sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
+spotify="no"	#setup spotify yes/no
 ####################################################################
 #
 #choices
@@ -32,7 +33,14 @@ elif [ $REP = "2" ];then
 	echo
 
 	read -p "Would you like to set up this pi as snapserver? [y/N] " REP
-	if [[ $REP =~ ^(yes|y|Y)$ ]]; then server="yes";
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then server="yes"; 
+		################
+		#spotify "without snapserver" not configured yet.
+		################
+		echo "Thanks to dtcooper for his easy raspotify setup!"
+		read -p "Do you want to setup as spotify connect speaker? [y/N] " REP
+		if [[ $REP =~ ^(yes|y|Y)$ ]]; then spotify="yes"; fi
+
 	fi
 
 	read -p "Would you like to set up MPD? [y/N] " REP
@@ -88,6 +96,8 @@ sudo chmod 755 btlInstall.sh
 sudo chmod 755 btlSetup.sh
 sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
+sudo chmod 755 spotifyConnectInstall.sh
+
 
 cd rpi-audio-receiver-master
 sudo chmod 755 hostnames.sh
@@ -102,6 +112,9 @@ cd ..
 
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient
+sudo ./mpdSetup.sh $server $mpd
+
+sudo ./spotifyConnectInstall.sh $server $spotify
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh $sclient $oclient
 
@@ -113,7 +126,6 @@ sudo ./btlSetup.sh $server $btl
 #sudo apt upgrade --yes
 
 sudo ./mpd.sh $server $mpd 
-sudo ./mpdSetup.sh $server $mpd
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
 

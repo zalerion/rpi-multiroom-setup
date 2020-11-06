@@ -38,6 +38,7 @@ https://github.com/MusicPlayerDaemon/MPD
 
 https://github.com/nicokaiser/rpi-audio-receiver
 
+https://github.com/dtcooper/raspotify
 
 ### Implemented
 * Setup of mdp
@@ -53,7 +54,7 @@ https://github.com/nicokaiser/rpi-audio-receiver
 * selection of audio output
 * setup hostname
 * setup wifi
-* setup a spotify speaker
+* setup a spotify speaker [ongoing]
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
