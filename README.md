@@ -4,7 +4,7 @@ Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapse
 
 Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
 2020-08-20-raspios-buster-armhf-lite.img made some problems with bluetooth.
-Add "sudo hciconfig hci0 reset" in autostart.sh
+<s>Add "sudo hciconfig hci0 reset" in autostart.sh</s> should work now
 
 
 Recommended with fresh install of raspbian buster lite.
@@ -50,7 +50,6 @@ https://github.com/dtcooper/raspotify
 * Setup a spotify speaker
 
 ### Planned
-* fix bluetooth setup problem automatically
 * selection of audio output
 * setup hostname
 * setup wifi
