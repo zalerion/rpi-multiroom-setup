@@ -50,7 +50,7 @@ https://github.com/dtcooper/raspotify
 * Setup a spotify speaker
 
 ### Planned
-
+* fix bluetooth setup problem automatically
 * selection of audio output
 * setup hostname
 * setup wifi
