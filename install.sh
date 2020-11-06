@@ -110,6 +110,8 @@ cd ..
 
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient
+sudo ./mpdSetup.sh $server $mpd
+
 sudo ./spotifyConnectInstall.sh $server $spotify
 sudo ./snapserver.sh $server $mpd
 sudo ./snapclient.sh $sclient $oclient
@@ -122,7 +124,6 @@ sudo ./btlSetup.sh $server $btl
 #sudo apt upgrade --yes
 
 sudo ./mpd.sh $server $mpd 
-sudo ./mpdSetup.sh $server $mpd
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
 
