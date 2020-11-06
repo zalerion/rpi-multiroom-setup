@@ -2,8 +2,6 @@
 Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapserver and mpd.
 
 
-Please be aware: this is an early stage.
-
 Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
 2020-08-20-raspios-buster-armhf-lite.img made some problems with bluetooth.
 Add "sudo hciconfig hci0 reset" in autostart.sh
