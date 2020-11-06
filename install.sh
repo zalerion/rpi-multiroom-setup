@@ -40,6 +40,7 @@ elif [ $REP = "2" ];then
 		echo "Thanks to dtcooper for his easy raspotify setup!"
 		read -p "Do you want to setup as spotify connect speaker? [y/N] " REP
 		if [[ $REP =~ ^(yes|y|Y)$ ]]; then spotify="yes"; fi
+
 	fi
 
 	read -p "Would you like to set up MPD? [y/N] " REP
@@ -50,6 +51,7 @@ elif [ $REP = "2" ];then
 			mpd=$REP
 		fi
 	fi
+	
 
 
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
@@ -96,10 +98,10 @@ sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
 sudo chmod 755 spotifyConnectInstall.sh
 
+
 cd rpi-audio-receiver-master
 sudo chmod 755 hostnames.sh
 sudo chmod 755 install-bluetooth.sh
-sudo chmod 755 install-spotify.sh
 sudo chmod 755 install-startup-sound.sh
 cd ..
 
