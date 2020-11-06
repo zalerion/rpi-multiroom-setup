@@ -47,14 +47,13 @@ https://github.com/dtcooper/raspotify
 * Setup of time sync for use of multiple PI
 * Setup for autostarting everything on boot
 * Convenient option to mount a network share (fritz nas)
-
+* Setup a spotify speaker
 
 ### Planned
 
 * selection of audio output
 * setup hostname
 * setup wifi
-* setup a spotify speaker [ongoing]
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
