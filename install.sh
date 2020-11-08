@@ -37,23 +37,24 @@ elif [ $REP = "2" ];then
 		################
 		#spotify "without snapserver" not configured yet.
 		################
+		echo
 		echo "Thanks to dtcooper for his easy raspotify setup!"
 		read -p "Do you want to setup as spotify connect speaker? [y/N] " REP
 		if [[ $REP =~ ^(yes|y|Y)$ ]]; then spotify="yes"; fi
 
 	fi
-
+	echo
 	read -p "Would you like to set up MPD? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then 
 		mpd="yes";
 		if [ $server = "yes" ];then
 			read -p "How many MPD instances? [1-80] " REP
 			mpd=$REP
-		fi
+		fi		
 	fi
 	
-
-
+	
+	echo
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
 	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; fi
@@ -111,7 +112,7 @@ cd ..
 ##################
 
 sudo ./autostartSetup.sh
-sudo ./mountnas.sh $oclient
+sudo ./mountnas.sh $oclient $mpd
 sudo ./mpdSetup.sh $server $mpd
 
 sudo ./spotifyConnectInstall.sh $server $spotify
