@@ -56,4 +56,4 @@ https://github.com/dtcooper/raspotify
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
-* for multiroom speaker - dsp for active 2-Way Speaker
+* for multiroom speakers: dsp for e.g active 2-way speaker
