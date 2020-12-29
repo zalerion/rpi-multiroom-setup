@@ -1,3 +1,9 @@
+pcm.!default {
+        type copy
+        slave.pcm "dsp"
+}
+
+
 pcm.dsp {
         type plug
         slave {
