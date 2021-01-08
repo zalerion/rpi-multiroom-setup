@@ -106,7 +106,7 @@ sudo chmod 755 mountnas.sh
 sudo chmod 755 spotifyConnectInstall.sh
 sudo chmod 755 asoundConf.sh
 sudo chmod 755 setupAudioHat.sh
-
+sudo chmod 755 dspSetup.sh
 
 cd rpi-audio-receiver-master
 sudo chmod 755 hostnames.sh
@@ -123,6 +123,8 @@ sudo ./setupAudioHat.sh $hat
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient $mpd
 sudo ./mpdSetup.sh $server $mpd
+
+sudo ./dspSetup.sh $dsp
 
 sudo ./spotifyConnectInstall.sh $server $spotify
 sudo ./snapserver.sh $server $mpd
