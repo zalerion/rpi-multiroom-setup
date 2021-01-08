@@ -12,7 +12,7 @@ pcm.dsp {
                 pcm {
                         type ladspa
 #                       channels 4
-                        path "/usr/lib/ladspa"
+                        path "/etc/lib/ladspa"
                         playback_plugins [{
                                 label "ladspa_dsp"
                         }]
