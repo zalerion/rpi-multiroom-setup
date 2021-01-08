@@ -12,6 +12,8 @@ sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
 spotify="no"	#setup spotify yes/no
+dsp="no"
+hat="no"	################################################################# setup for hifiberry etc.
 ####################################################################
 #
 #choices
@@ -66,7 +68,11 @@ elif [ $REP = "2" ];then
 
 fi
 
-
+	read -p "Would you like to set up a dsp? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dsp="yes"; fi
+	
+	read -p "Would you like to set use an Audio-Hat? [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then hat="yes"; fi
 
 
 
@@ -98,6 +104,8 @@ sudo chmod 755 btlSetup.sh
 sudo chmod 755 snapserverconf.sh
 sudo chmod 755 mountnas.sh
 sudo chmod 755 spotifyConnectInstall.sh
+sudo chmod 755 asoundConf.sh
+sudo chmod 755 setupAudioHat.sh
 
 
 cd rpi-audio-receiver-master
@@ -110,6 +118,7 @@ cd ..
 ##################
 #calling actual install and config scripts
 ##################
+sudo ./setupAudioHat.sh $hat
 
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient $mpd
@@ -129,6 +138,7 @@ sudo ./btlSetup.sh $server $btl
 sudo ./mpd.sh $server $mpd 
 sudo ./snapserverconf.sh $server
 sudo ./setTimeSync.sh
+sudo ./asoundConf.sh $sclient $btl $dsp
 
 echo
 echo
