@@ -19,9 +19,10 @@ sudo make install
 
 cd ..
 rm -rf dsp-master
+rm -rf master.zip
 
 sudo mkdir /etc/ladspa_dsp
-sudo nano /etc/ladspa_dsp/config
+#sudo nano /etc/ladspa_dsp/config
 
 cat  <<EOM > /etc/ladspa_dsp/config
   input_channels=2         ################ To not be mono
