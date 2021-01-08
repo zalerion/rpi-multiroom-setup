@@ -14,7 +14,7 @@ cd dsp-master
 make
 sudo make install
 
-cd..
+cd ..
 rm -rf dsp-master
 
 sudo mkdir /etc/ladspa_dsp
