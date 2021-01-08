@@ -23,16 +23,16 @@ rm snapclient_0.22.0-1_armhf.deb
 if [[ "$2" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 sudo systemctl disable snapclient.service
 echo "snapclient -s snapclient &" >> /etc/autostart.sh
-cat <<EOM >> /etc/asound.conf
-###############################################################################
-#
-#snapclient
-        #
-        pcm.snapclient
-        {
-                type plug;
-                slave.pcm "sysdefault:0";
-        }
-###############################################################################
-EOM
+#cat <<EOM >> /etc/asound.conf
+################################################################################
+##
+##snapclient
+#        #
+#        pcm.snapclient
+#        {
+#                type plug;
+#                slave.pcm "sysdefault:0";
+#        }
+################################################################################
+#EOM
 
