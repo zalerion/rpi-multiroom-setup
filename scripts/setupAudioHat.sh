@@ -76,27 +76,27 @@ read -p "Please choose your hat [1/2/...]" REP
 
 if [ $REP = "1" ];then
         cat  <<EOM >> /boot/config.txt
-                dtoverlay=hifiberry-dac
+dtoverlay=hifiberry-dac
 EOM
 
 elif [ $REP = "2" ];then
   cat  <<EOM >> /boot/config.txt
-    dtoverlay=hifiberry-dacplus
+dtoverlay=hifiberry-dacplus
 EOM
 
 elif [ $REP = "3" ];then
   cat  <<EOM >> /boot/config.txt
-    dtoverlay=iqaudio-dacplus
+dtoverlay=iqaudio-dacplus
 EOM
 
 elif [ $REP = "4" ];then
   cat  <<EOM >> /boot/config.txt
-    dtoverlay=iqaudio-dacplus,unmute_amp
+dtoverlay=iqaudio-dacplus,unmute_amp
 EOM
 
 elif [ $REP = "5" ];then
   cat  <<EOM >> /boot/config.txt
-    dtoverlay=iqaudio-codec
+dtoverlay=iqaudio-codec
 EOM
 
 fi
