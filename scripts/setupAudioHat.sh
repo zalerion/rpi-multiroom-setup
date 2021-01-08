@@ -72,34 +72,36 @@ echo "[4] DigiAMP+"
 echo "[5] IQAudio Codec Zero"
 
 echo
-read -p "Please choose this systems general purpose [1/2]" REP
+read -p "Please choose your hat [1/2/...]" REP
 
 if [ $REP = "1" ];then
-  cat  <<EOM >> /boot/config.txt
-    dtoverlay=hifiberry-dac
-  EOM
-  
+        cat  <<EOM >> /boot/config.txt
+                dtoverlay=hifiberry-dac
+EOM
+
 elif [ $REP = "2" ];then
   cat  <<EOM >> /boot/config.txt
     dtoverlay=hifiberry-dacplus
-  EOM
-  
+EOM
+
 elif [ $REP = "3" ];then
   cat  <<EOM >> /boot/config.txt
     dtoverlay=iqaudio-dacplus
-  EOM
-  
+EOM
+
 elif [ $REP = "4" ];then
   cat  <<EOM >> /boot/config.txt
     dtoverlay=iqaudio-dacplus,unmute_amp
-  EOM
-  
+EOM
+
 elif [ $REP = "5" ];then
   cat  <<EOM >> /boot/config.txt
     dtoverlay=iqaudio-codec
-  EOM
-  
+EOM
+
 fi
+
+
 
 
 
