@@ -1,3 +1,6 @@
+#!/bin/bash
+if [ $1 = yes ]; then exit 0; fi #dsp yes/no
+
 sudo apt-get update
 sudo apt-get install build-essential -y
 sudo apt-get install pkg-config -y 
