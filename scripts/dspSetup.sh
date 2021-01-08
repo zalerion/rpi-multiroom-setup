@@ -30,7 +30,7 @@ cat  <<EOM > /etc/ladspa_dsp/config
   effects_chain= @./eq.txt ################ Contains all the acutal eq definitions
 EOM
 
-cat  <<EOM > /etc/ladspa_dsp/config
+cat  <<EOM > /etc/ladspa_dsp/eq.txt
   remix 0 0	1 1	# 0 is left, 1 is right
   :0,2 lowpass 1000 0.7	# "left" output
   :1,3 highpass 1000 0.7	# "right" output
