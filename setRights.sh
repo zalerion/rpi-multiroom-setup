@@ -1,3 +1,5 @@
+sudo chmod 755 callScripts.sh
+
 cd scripts
 
 sudo chmod 755 autostartSetup.sh
