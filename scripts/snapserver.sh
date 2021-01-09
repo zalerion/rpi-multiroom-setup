@@ -1,6 +1,7 @@
 #!/bin/bash
+source options.conf
 
-if [ "$1" == "no" ]
+if [ $server == "no" ]
   then 
     exit 0;
 fi
