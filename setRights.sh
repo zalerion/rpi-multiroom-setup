@@ -1,4 +1,5 @@
 sudo chmod 755 callScripts.sh
+sudo chmod 755 setOptions.sh
 
 cd scripts
 
