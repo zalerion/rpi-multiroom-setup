@@ -20,12 +20,12 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 #
 ####################################################################
 
-echo "Choose your setup:"
-echo
-echo "[1] Only snapclient (select this option for a multiroom speaker)"
-echo "[2] Audio server (select for local server/receiver or multiroom server setups) "
-echo
-read -p "Please choose this systems general purpose [1/2]" REP
+#echo "Choose your setup:"
+#echo
+#echo "[1] Only snapclient (select this option for a multiroom speaker)"
+#echo "[2] Audio server (select for local server/receiver or multiroom server setups) "
+#echo
+#read -p "Please choose this systems general purpose [1/2]" REP
 
 #if [ $REP = "1" ];then
 #	echo
@@ -95,6 +95,8 @@ read -p "Please choose this systems general purpose [1/2]" REP
 sudo chmod 755 setRights.sh
 sudo ./setRights.sh
 
+
+sudo ./setOptions.sh
 #cd scripts
 
 #sudo chmod 755 autostartSetup.sh
