@@ -1,7 +1,8 @@
 #!/bin/bash
+source options.conf
 
-server="$1" 	# yes / no
-mpd="$2"	# number mpd servers
+#server="$1" 	# yes / no
+#mpd="$2"	# number mpd servers
 
 if [ $mpd = "no" ];then exit 0; fi
 
