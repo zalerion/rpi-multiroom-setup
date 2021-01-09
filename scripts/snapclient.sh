@@ -1,9 +1,10 @@
 #!/bin/bash
+source options.conf
 
 #echo
 #echo -n "Do you want to install Snapclient v0.22.0? [y/N] "
 #read REPLY
-if [[ ! "$1" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
+if [[ ! $sclient =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 
 
 
