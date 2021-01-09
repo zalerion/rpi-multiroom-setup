@@ -1,7 +1,7 @@
 #!/bin/bash
+source options.conf
 
-
-if [[ ! "$1" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
+if [[ ! $hat =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 
 cat  <<EOM > /boot/config.txt
 
