@@ -1,5 +1,8 @@
 #!/bin/bash
-if [ $1 = yes ]; then exit 0; fi #no mounting, if the setup is only as a client
+source options.conf
+
+
+if [ $oclient = yes ]; then exit 0; fi #no mounting, if the setup is only as a client
 echo
 echo "Mount a network share. Tested for fritz box nas. If it is not working, you have to do it manually."
 read -p "This is possibly wonky. Do you want to try it anyways? (y/N)" go
@@ -27,7 +30,7 @@ echo "sudo mount -t cifs  //192.168.0.1/fritznas/Volume /mnt/share -o noserverin
 sudo chmod 755 /etc/automount.sh
 
 
-if [ $2 = yes ]; then exit 0; fi #if mpd is installed, offer automated playlist backups
+if [ $mpd = yes ]; then exit 0; fi #if mpd is installed, offer automated playlist backups
 read -p "Would you like to set up an automated backup for your mpd playlists? They will be saved in your network share.[y/N] " go
 if [[ ! "$go" =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 
