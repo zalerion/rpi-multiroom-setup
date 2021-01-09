@@ -19,6 +19,9 @@ sudo apt-get update
 sudo apt-get upgrade --yes
 rm snapclient_0.22.0-1_armhf.deb
 
+#################
+#following needs testing
+##############
 
 #setup for server only
 if [[ $server =~ ^(yes|y|Y)$ ]]; then exit 0; fi
