@@ -25,8 +25,7 @@ else
         echo "#replaygain                      \"no\"" > ./res/mpd/8_rpgain
 fi
 
-sudo mkdir /var/lib/mpd/playlists
-cp ./res/Radio.m3u /var/lib/mpd/playlists
+
 
 ########################################################
 #individual setup
