@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-
+echo "Please set your hostname:"
+echo
 read -p "Hostname [$(hostname)]: " HOSTNAME
 sudo raspi-config nonint do_hostname ${HOSTNAME:-$(hostname)}
 
