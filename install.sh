@@ -123,7 +123,7 @@ sudo ./setRights.sh
 #calling actual install and config scripts
 ##################
 
-sudo callSkripts.sh
+sudo callScripts.sh
 
 echo
 echo
