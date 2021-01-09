@@ -25,6 +25,7 @@ else
         echo "#replaygain                      \"no\"" > ./res/mpd/8_rpgain
 fi
 
+sudo mkdir /var/lib/mpd/playlists
 cp ./res/Radio.m3u /var/lib/mpd/playlists
 
 ########################################################
@@ -65,6 +66,6 @@ fi
 if [ $mpd = "1" ]; then 
 	read -p "Your MPD server uses the standard port of 6600 [OK/OK]" dump
 else
-	read -p "Ports range from 6600 to $((6600-1+$2)) [OK/OK]" dump
+	read -p "Ports range from 6600 to $((6600-1+$mpd)) [OK/OK]" dump
 fi
 
