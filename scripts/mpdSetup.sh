@@ -4,7 +4,7 @@ source options.conf
 #server="$1" 	# yes / no
 #mpd="$2"	# number mpd servers
 
-if [ $mpd = "no" ];then exit 0; fi
+if [ $mpd == "no" ];then exit 0; fi
 
 echo "Basic setup for mpd: library in /mnt/share. All rights without password."
 read -p "Change later if needed. [OK/Enter]" dump
