@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-echo "Please set your hostname:"
+echo "Please set your hostname. This will be used to display your device in the network and as bt receiver."
 echo
 read -p "Hostname [$(hostname)]: " HOSTNAME
 sudo raspi-config nonint do_hostname ${HOSTNAME:-$(hostname)}
