@@ -1,13 +1,13 @@
 #!/bin/bash
 
-export server="no"	#setup as server yes/no
-export mpd="no"	#setup mpd yes/no
-export sclient="no" 	#setup of snapclient yes/no
-export oclient="no" 	#option for "only only as client" setup
-export btl="no"	##setup the bluetooth receiver yes/no
-export spotify="no"	#setup spotify yes/no
-export dsp="no"
-export hat="no"	# setup for hifiberry etc.
+server="no"	#setup as server yes/no
+mpd="no"	#setup mpd yes/no
+sclient="no" 	#setup of snapclient yes/no
+oclient="no" 	#option for "only only as client" setup
+btl="no"	##setup the bluetooth receiver yes/no
+spotify="no"	#setup spotify yes/no
+dsp="no"
+hat="no"	# setup for hifiberry etc.
 
 echo "Choose your setup:"
 echo
@@ -62,3 +62,13 @@ fi
 	
 	read -p "Would you like to set use an Audio-Hat? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then hat="yes"; fi
+
+cat <<EOM > scripts/options.conf
+server=$server	#setup as server yes/no
+mpd=$mpd	#setup mpd yes/no
+sclient=$sclient 	#setup of snapclient yes/no
+oclient=$oclient 	#option for "only only as client" setup
+btl=$btl	##setup the bluetooth receiver yes/no
+spotify=$spotify	#setup spotify yes/no
+dsp=$dsp
+hat=$hat	# setup for hifiberry etc.
