@@ -124,7 +124,7 @@ sudo ./setOptions.sh
 ##################
 #calling actual install and config scripts
 ##################
-
+pwd
 sudo callScripts.sh
 
 echo
