@@ -1,6 +1,8 @@
 #!/bin/bash
-server="$1"   # server yes/no
-spotify="$2"	# install spotify speaker yes/no
+source options.conf
+
+#server="$1"   # server yes/no
+#spotify="$2"	# install spotify speaker yes/no
 
 if [ $spotify = "no" ];then exit 0; fi
 
