@@ -6,14 +6,14 @@ if [[ $(id -u) -ne 0 ]] ; then echo "Please run as root" ; exit 1 ; fi
 ##starting with clean asound.conf
 
 
-server="no"	#setup as server yes/no
-mpd="no"	#setup mpd yes/no
-sclient="no" 	#setup of snapclient yes/no
-oclient="no" 	#option for "only only as client" setup
-btl="no"	##setup the bluetooth receiver yes/no
-spotify="no"	#setup spotify yes/no
-dsp="no"
-hat="no"	################################################################# setup for hifiberry etc.
+#server="no"	#setup as server yes/no
+#mpd="no"	#setup mpd yes/no
+#sclient="no" 	#setup of snapclient yes/no
+#oclient="no" 	#option for "only only as client" setup
+#btl="no"	##setup the bluetooth receiver yes/no
+#spotify="no"	#setup spotify yes/no
+#dsp="no"
+#hat="no"	################################################################# setup for hifiberry etc.
 ####################################################################
 #
 #choices
