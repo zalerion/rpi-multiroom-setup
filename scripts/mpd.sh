@@ -33,7 +33,7 @@ if [[ ! $mpd == 1 ]]; then
   sudo systemctl stop mpd
   sudo systemctl disable mpd
 fi
-
+cp ./res/Radio.m3u /var/lib/mpd/playlists
 #echo "Setting up your MPD servers now"
 
 #sudo ./mpdSetup.sh $1 $2
