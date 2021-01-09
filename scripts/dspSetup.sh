@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ $dsp == no ]; then exit 0; fi #dsp yes/no
+source options.conf
+
+if [ $dsp != yes ]; then exit 0; fi #dsp yes/no
 
 sudo apt-get update
 sudo apt-get install build-essential -y
