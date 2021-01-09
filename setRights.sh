@@ -20,6 +20,7 @@ sudo chmod 755 dspSetup.sh
 
 cd rpi-audio-receiver-master
 sudo chmod 755 hostnames.sh
+sudo ./hostnames.sh
 sudo chmod 755 install-bluetooth.sh
 sudo chmod 755 install-startup-sound.sh
 cd ..
