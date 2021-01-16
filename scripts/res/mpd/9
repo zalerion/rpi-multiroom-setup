@@ -2,7 +2,7 @@
 # This setting sets the pre-amp used for files that have ReplayGain tags. By
 # default this setting is disabled.
 #
-#replaygain_preamp               "4"
+replaygain_preamp               "4"
 #
 # This setting sets the pre-amp used for files that do NOT have ReplayGain tags.
 # By default this setting is disabled.
