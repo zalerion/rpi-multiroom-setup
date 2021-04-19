@@ -40,6 +40,8 @@ https://github.com/nicokaiser/rpi-audio-receiver
 
 https://github.com/dtcooper/raspotify
 
+https://github.com/bmc0/dsp
+
 ### Implemented
 * Setup of mdp
 * Setup as bluetooth receiver
@@ -48,6 +50,8 @@ https://github.com/dtcooper/raspotify
 * Setup for autostarting everything on boot
 * Convenient option to mount a network share (fritz nas)
 * Setup a spotify speaker
+* Setup for Hats: DAC and amps
+* for multiroom speakers: dsp e.g for active 2-way speaker
 
 ### Planned
 * selection of audio output
@@ -56,3 +60,4 @@ https://github.com/dtcooper/raspotify
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
+

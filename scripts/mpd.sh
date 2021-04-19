@@ -1,10 +1,11 @@
 #!/bin/bash
+source options.conf
 
-if [[ "$1" == "yes" ]]
+if [[ $server == yes ]]
   then
     echo
     echo "You have selected the setup as a Snapserver."
-    if [[ "$2" == "1" ]] 
+    if [[ $mpd == 1 ]] 
     then
 	echo
 #	echo "Only one MPD was selected."
@@ -28,11 +29,11 @@ sudo apt-get install mpd --yes
 #read -p "mpd installed"
 
 
-if [[ ! "$2" == "1" ]]; then
+if [[ ! $mpd == 1 ]]; then
   sudo systemctl stop mpd
   sudo systemctl disable mpd
 fi
-
+cp ./res/Radio.m3u /var/lib/mpd/playlists
 #echo "Setting up your MPD servers now"
 
 #sudo ./mpdSetup.sh $1 $2
