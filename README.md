@@ -61,3 +61,11 @@ https://github.com/bmc0/dsp
 * add choices for samplerate
 * add choice for mopidy instead of mpd
 
+
+
+# Konwn issues
+Not all setups will work on every Pi out of the box.
+Pi 3 should be straightforward.
+Pi 4 might need adjustments. Specifivally for the local audio output via hdmi changes in sudo raspi-conf, /boot/config.txt and /etc/asound.conf might be needed.
+
+Some setups have had problems with 48000Hz samplerate, it seems to be better with the updated RaspiOS. If you have audio dropouts, try changing the samplerates to 44100Hz.
