@@ -1,7 +1,7 @@
 #stream = tcp://127.0.0.1?name=mopidy_tcp
 
 # Default sample format
-#sampleformat = 48000:16:2
+sampleformat = 48000:16:2
 
 # Default transport codec
 # (flac|ogg|opus|pcm)[:options]
