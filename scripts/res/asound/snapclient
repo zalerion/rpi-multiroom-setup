@@ -7,6 +7,6 @@
         pcm.snapclient
         {
                 type plug;
-                slave.pcm "sysdefault:0";
+                slave.pcm "sysdefault:1";
         }
 ###############################################################################
