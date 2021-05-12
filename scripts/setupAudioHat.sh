@@ -10,7 +10,7 @@ cat  <<EOM > /boot/config.txt
 # Some settings may impact device functionality. See link above for details
 
 # uncomment if you get no picture on HDMI for a default "safe" mode
-#hdmi_safe=1
+hdmi_safe=1
 
 # uncomment this if your display has a black border of unused pixels visible
 # and your display can output without overscan
