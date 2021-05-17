@@ -42,6 +42,8 @@ https://github.com/dtcooper/raspotify
 
 https://github.com/bmc0/dsp
 
+https://github.com/Arkq/bluez-alsa + dependencies
+
 ### Implemented
 * Setup of mdp
 * Setup as bluetooth receiver
