@@ -57,13 +57,12 @@ sudo make install
 
 
 
+
+
 cd ~
-
-
-git clone https://github.com/EHfive/ldacBT.git
-cd ldacBT
-git submodule update --init
-
+wget https://github.com/mstorsjo/fdk-aac/archive/refs/heads/master.zip
+unzip master.zip
+cd fdk-aac-master
 
 sudo mkdir build && cd build
 sudo cmake \
@@ -76,16 +75,13 @@ sudo make DESTDIR=$DEST_DIR install
 
 
 
-
-
-
 cd ~
 
 git clone https://github.com/Arkq/bluez-alsa.git
 cd bluez-alsa
 sudo autoreconf --install --force
 mkdir build && cd build
-../configure --enable-aptx --with-libopenaptx --enable-manpages --enable-ldac
+../configure --enable-aptx --with-libopenaptx --enable-manpages --enable-aac
 
 sudo make
 sudo make install
