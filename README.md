@@ -60,6 +60,7 @@ https://github.com/Arkq/bluez-alsa + dependencies
 
 ### Planned
 * testing/setting up new ALSA audio grab for snapserver.
+* rounting BT not through default...
 * selection of audio output (a hat will be selected, but HDMI/Headphones might be problematic)
 * better defaults for hdmi
 * setup hostname
