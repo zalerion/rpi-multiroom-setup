@@ -59,7 +59,9 @@ https://github.com/Arkq/bluez-alsa + dependencies
 * for multiroom speakers: dsp e.g for active 2-way speaker
 
 ### Planned
-* selection of audio output
+* testing/setting up new ALSA audio grab for snapserver.
+* selection of audio output (a hat will be selected, but HDMI/Headphones might be problematic)
+* better defaults for hdmi
 * setup hostname
 * setup wifi
 * setup automatic reboot
