@@ -10,6 +10,9 @@ cd rpi-audio-receiver-master
 sudo ./install-bluetooth.sh
 cd ..
 
+
+if [[ ! $btlADV =~ (yes|y|Y) ]]; then exit 0; fi
+
 echo
 echo
 echo
