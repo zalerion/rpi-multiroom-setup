@@ -5,6 +5,7 @@ mpd="no"	#setup mpd yes/no
 sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
+btlADC="no"	#Advanced
 spotify="no"	#setup spotify yes/no
 dsp="no"
 hat="no"	# setup for hifiberry etc.
@@ -48,7 +49,10 @@ elif [ $REP = "2" ];then
 	echo
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
 	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
-	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; fi
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; 
+		read -p "Would you like advanced codecs like aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+		if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
+	fi
 
 
 
