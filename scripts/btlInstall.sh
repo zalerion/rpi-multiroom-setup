@@ -56,12 +56,33 @@ sudo make install
 
 cd ~
 
+
+git clone https://github.com/EHfive/ldacBT.git
+cd ldacBT
+git submodule update --init
+
+
+sudo mkdir build && cd build
+sudo cmake \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DINSTALL_LIBDIR=/usr/lib \
+    -DLDAC_SOFT_FLOAT=OFF \
+    ../
+sudo make DESTDIR=$DEST_DIR install
+
+
+
+
+
+
+
+cd ~
+
 git clone https://github.com/Arkq/bluez-alsa.git
 cd bluez-alsa
 sudo autoreconf --install --force
 mkdir build && cd build
-../configure --enable-aptx --with-libopenaptx --enable-manpages
+../configure --enable-aptx --with-libopenaptx --enable-manpages --enable-ldac
 
 sudo make
 sudo make install
-
