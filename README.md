@@ -1,5 +1,5 @@
 # rpi-multiroom-setup
-Started as multiroom project. Became more of of an an general purpose audio setup.
+Started as multiroom project. Became more of an general purpose audio setup.
 Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
 
 
