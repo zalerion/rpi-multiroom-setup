@@ -14,8 +14,9 @@ echo "Choose your setup:"
 echo
 echo "[1] Only snapclient (select this option for a multiroom speaker)"
 echo "[2] Audio server (select for local server/receiver or multiroom server setups) "
+echo "[3] Mobile Box (just bluetooth)"
 echo
-read -p "Please choose this systems general purpose [1/2]" REP
+read -p "Please choose this systems general purpose [1/2/3]" REP
 
 if [ $REP = "1" ];then
 	echo
@@ -55,11 +56,17 @@ elif [ $REP = "2" ];then
 	fi
 
 
-
 	read -p "Would you like to also use this pi as snapclient? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then sclient="yes"; fi
 
+
+elif [ $REP = "3" ];then
+	btl="yes"
+	read -p "Would you like codec support aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 fi
+
+	
 
 	read -p "Would you like to set up a dsp? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dsp="yes"; fi
