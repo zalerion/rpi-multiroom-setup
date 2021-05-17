@@ -1,5 +1,8 @@
 # rpi-multiroom-setup
-Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapserver and mpd.
+Started as multiroom project. Became more of of an an general purpose audio setup.
+Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
+
+
 
 
 Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
