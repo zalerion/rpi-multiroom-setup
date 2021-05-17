@@ -46,7 +46,7 @@ https://github.com/Arkq/bluez-alsa + dependencies
 
 ### Implemented
 * Setup of mdp
-* Setup as bluetooth receiver
+* Setup as bluetooth receiver (including AAC and aptX)
 * Setup of snapcast client and server
 * Setup of time sync for use of multiple PI
 * Setup for autostarting everything on boot
