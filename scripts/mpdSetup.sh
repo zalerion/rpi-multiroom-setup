@@ -40,7 +40,7 @@ if [ "$server" = "yes" ]; then
         for i in `seq 0 "$(($mpd-1))"`;
         do
 		read -p "Please enter the name for stream Number $i:" name
-		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read&sampleformat=44100:16:2" >> ./res/snapserver/2_streams
+		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> ./res/snapserver/2_streams
 #######################################
 		cat  <<EOM > ./res/mpd/6_fifo
 	name            "$name"

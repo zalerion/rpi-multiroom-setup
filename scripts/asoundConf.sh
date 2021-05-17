@@ -16,7 +16,9 @@ cd res/asound
   elif [ $sclient = "yes" ];then
     cat snapclient >> /etc/asound.conf    
   fi
-
-  if [ $btl = "yes" ];then
-    cat bluetooth >> /etc/asound.conf
+  
+  if [ $server = "yes" ];then
+    if [ $btl = "yes" ];then
+      cat bluetooth >> /etc/asound.conf
+    fi
   fi

@@ -1,5 +1,8 @@
 # rpi-multiroom-setup
-Simplify the extensive setup of a raspberry pi multiroom system. Based on Snapserver and mpd.
+Started as multiroom project. Became more of an general purpose audio setup.
+Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
+
+
 
 
 Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
@@ -42,9 +45,11 @@ https://github.com/dtcooper/raspotify
 
 https://github.com/bmc0/dsp
 
+https://github.com/Arkq/bluez-alsa + dependencies
+
 ### Implemented
 * Setup of mdp
-* Setup as bluetooth receiver
+* Setup as bluetooth receiver (including AAC and aptX)
 * Setup of snapcast client and server
 * Setup of time sync for use of multiple PI
 * Setup for autostarting everything on boot
@@ -54,10 +59,21 @@ https://github.com/bmc0/dsp
 * for multiroom speakers: dsp e.g for active 2-way speaker
 
 ### Planned
-* selection of audio output
+* testing/setting up new ALSA audio grab for snapserver.
+* rounting BT not through default...
+* selection of audio output (a hat will be selected, but HDMI/Headphones might be problematic)
+* better defaults for hdmi
 * setup hostname
 * setup wifi
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
 
+
+
+# Konwn issues
+Not all setups will work on every Pi out of the box.
+Pi 3 should be straightforward.
+Pi 4 might need adjustments. Specifivally for the local audio output via hdmi changes in sudo raspi-conf, /boot/config.txt and /etc/asound.conf might be needed.
+
+Some setups have had problems with 48000Hz samplerate, it seems to be better with the updated RaspiOS. If you have audio dropouts, try changing the samplerates to 44100Hz.

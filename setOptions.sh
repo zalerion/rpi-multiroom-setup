@@ -5,16 +5,18 @@ mpd="no"	#setup mpd yes/no
 sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
+btlADC="no"	#Advanced
 spotify="no"	#setup spotify yes/no
 dsp="no"
 hat="no"	# setup for hifiberry etc.
 
 echo "Choose your setup:"
 echo
-echo "[1] Only snapclient (select this option for a multiroom speaker)"
-echo "[2] Audio server (select for local server/receiver or multiroom server setups) "
+echo "[1] Multiroom Speaker (snapclient, dsp and hats)"
+echo "[2] Audio Server (select for local server/receiver or multiroom server setups. All options are available here) "
+echo "[3] Mobile Box (just bluetooth, dsp and hats)"
 echo
-read -p "Please choose this systems general purpose [1/2]" REP
+read -p "Please choose this systems general purpose [1/2/3]" REP
 
 if [ $REP = "1" ];then
 	echo
@@ -48,14 +50,23 @@ elif [ $REP = "2" ];then
 	echo
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
 	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
-	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; fi
-
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; 
+		read -p "Would you like codec support aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+		if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
+	fi
 
 
 	read -p "Would you like to also use this pi as snapclient? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then sclient="yes"; fi
 
+
+elif [ $REP = "3" ];then
+	btl="yes"
+	read -p "Would you like codec support aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 fi
+
+	
 
 	read -p "Would you like to set up a dsp? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dsp="yes"; fi

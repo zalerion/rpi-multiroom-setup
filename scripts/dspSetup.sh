@@ -47,7 +47,10 @@ remix 0,1 2,3
 #mixes both channels back
 
 
-# This demonstrates a split of left and right in high and low channels, filters them, and recombines them. In Sum in=out
+# This demonstrates a split of left and right in high and low channels, filters them, and recombines them. Adapt for own use.
+# 
+# eq [Hz] [Q] [Gain] # parametric EQ
+# 
 #remix puts out:
 #remix 0 1 #passthrough
 #remix 0,1 0,1 #mixes both channels back

@@ -1,4 +1,4 @@
-        format          "44100:16:2"
+        format          "48000:16:2"
         mixer_type      "software"
 }
 
@@ -16,36 +16,7 @@
 #}
 
 
-#######################################
-#
-#main output
-#audio_output {
-#       type            "fifo"
-#       name            "Mainstream"
-#       path            "/tmp/Mainfifo"
-#       format          "44100:16:2"
-#       mixer_type      "software"
-#}
-#######################################
 
-
-#audio_output {
-#    enabled        "no"
-#    type            "fifo"
-#    name            "Schlafzimmer"
-#    path            "/tmp/Schlafzimmerfifo"
-#    format          "44100:16:2"
-#    mixer_type      "software"
-#}
-
-#audio_output {
-#    enabled         "no"
-#    type            "fifo"
-#    name            "Küche"
-#    path            "/tmp/Küchefifo"
-#    format          "44100:16:2"
-#    mixer_type      "software"
-#}
 
 
 #####################################################################
