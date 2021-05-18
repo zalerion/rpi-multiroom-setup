@@ -1,3 +1,5 @@
+## setup audio with dsp in case of client only (snapclient and/or bluetooth)
+
 pcm.!default {
         type copy
         slave.pcm "dsp"
