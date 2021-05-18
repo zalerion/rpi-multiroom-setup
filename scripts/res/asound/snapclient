@@ -1,7 +1,7 @@
 
 
 ###############################################################################$
-#
+#setup in case of server setup (without dsp). Snapclient gets own audio sink to prevent collisions with possible audio input on default and for the server (mainly bluetooth)
 #snapclient
         #
         pcm.snapclient
