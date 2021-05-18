@@ -1,3 +1,4 @@
+#snapclient audio sink in with dsp in case of running snapserver. Prevent collisions with inputs on default.
 pcm.snapclient {
         type plug
         slave {
