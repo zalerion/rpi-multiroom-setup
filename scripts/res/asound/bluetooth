@@ -1,5 +1,6 @@
 
 ###########################################################################
+#Bluetooth setup for snapserver scenario. Redirects bluetooth audio from default to a snapserver pipe
 #
 #bluetooth comes in via default
 pcm.!default {
