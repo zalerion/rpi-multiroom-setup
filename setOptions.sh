@@ -83,4 +83,5 @@ btl=$btl	##setup the bluetooth receiver yes/no
 spotify=$spotify	#setup spotify yes/no
 dsp=$dsp
 hat=$hat	# setup for hifiberry etc.
+btlADC=$btlADC
 EOM
