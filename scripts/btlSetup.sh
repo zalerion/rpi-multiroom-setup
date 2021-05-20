@@ -2,6 +2,7 @@
 source options.conf
 
 if [[ ! $btl =~ (yes|y|Y) ]]; then exit 0; fi
+echo "sleep 3" >> /etc/autostart.sh 
 echo "sudo hciconfig hci0 reset" >> /etc/autostart.sh 
 
 if [[ ! $server =~ (yes|y|Y) ]]; then exit 0; fi
