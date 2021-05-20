@@ -13,7 +13,7 @@ pcm.rateConvert {
     slave {
         pcm writeFile # Direct to the plugin which will write to a file
         format S16_LE
-        rate 48000
+        rate 44100
     }
 }
 ###############
