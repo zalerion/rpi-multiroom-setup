@@ -12,7 +12,7 @@ echo "Updating dependencies and removing downloaded files"
 
 sudo apt-get -f install --yes
 sudo apt-get update
-sudo apt-get upgrade --yes
+#sudo apt-get upgrade --yes
 rm snapserver_0.25.0-1_armhf.deb
 
 
