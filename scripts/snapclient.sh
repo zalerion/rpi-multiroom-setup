@@ -24,7 +24,7 @@ rm snapclient_0.25.0-1_armhf.deb
 ##############
 
 #setup for server only
-if [[ $server =~ ^(yes|y|Y)$ ]]; then exit 0; fi
+if [[ ! $server =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 sudo systemctl disable snapclient.service
 echo "snapclient -s snapclient &" >> /etc/autostart.sh
 #cat <<EOM >> /etc/asound.conf
