@@ -5,7 +5,7 @@ mpd="no"	#setup mpd yes/no
 sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
-btlADC="no"	#Advanced
+btlADV="no"	#Advanced
 spotify="no"	#setup spotify yes/no
 dsp="no"
 hat="no"	# setup for hifiberry etc.
@@ -83,5 +83,5 @@ btl=$btl	##setup the bluetooth receiver yes/no
 spotify=$spotify	#setup spotify yes/no
 dsp=$dsp
 hat=$hat	# setup for hifiberry etc.
-btlADC=$btlADC
+btlADV=$btlADV
 EOM
