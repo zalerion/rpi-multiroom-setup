@@ -1,7 +1,8 @@
 cd scripts
 
-sudo ./setupAudioHat.sh $hat
 
+sudo  rpi-audio-receiver-master/hostnames.sh
+sudo ./setupAudioHat.sh $hat
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient $mpd
 sudo ./mpdSetup.sh $server $mpd
