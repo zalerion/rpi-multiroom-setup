@@ -25,8 +25,5 @@ cd res/asound
     if [ $dsp = "yes" ];then
       cat dsp >> /etc/asound.conf
     fi
-  
-  elif [ $dsp = "yes" ];then
-    cat dsp >> /etc/asound.conf
   fi
   
