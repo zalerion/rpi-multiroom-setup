@@ -43,7 +43,7 @@ remix 0 0	1 1
 ## "left" output
 #:1,3 highpass 1000 0.7	
 ## "right" output
-#remix 0,1 2,3 
+remix 0,1 2,3 
 ##mixes both channels back
 
 
