@@ -1,3 +1,6 @@
+# 5.10 Kernel apparently broken https://github.com/badaix/snapcast/issues/815
+will be testing for last functioning version
+
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
 Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
