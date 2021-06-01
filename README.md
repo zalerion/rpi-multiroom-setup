@@ -1,5 +1,6 @@
-# 5.10 Kernel apparently broken https://github.com/badaix/snapcast/issues/815
+# 5.10 Kernel apparently broken https://github.com/badaix/snapcast/issues/815 - dsp unusable for some sources
 will be testing for last functioning version
+2021-01-11-raspios-buster-armhf-lite has no obvious problems
 
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
