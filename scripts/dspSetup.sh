@@ -4,29 +4,61 @@ source options.conf
 
 if [ $dsp != yes ]; then exit 0; fi #dsp yes/no
 
-sudo apt-get update
-sudo apt-get install build-essential -y
-sudo apt-get install pkg-config -y 
-#sudo apt install git-all -y
-sudo apt-get install ladspa-sdk -y
+######################### compiling yourself
+#sudo apt-get update
+#sudo apt-get install build-essential -y
+#sudo apt-get install pkg-config -y 
+#sudo apt-get install ladspa-sdk -y
 
-sudo wget https://github.com/bmc0/dsp/archive/master.zip
-unzip master
-cd dsp-master
+#sudo wget https://github.com/bmc0/dsp/archive/master.zip
+#unzip master
+#cd dsp-master
 
-make
-sudo make install
+#make
+#sudo make install
 
-cd ..
-rm -rf dsp-master
-rm -rf master.zip
+#cd ..
+#rm -rf dsp-master
+#rm -rf master.zip
+
+#wget https://pilotfiber.dl.sourceforge.net/project/vlevel/vlevel/0.5/vlevel-0.5.tar.gz
+#tar -xzf vlevel-0.5.tar.gz
+#cd vlevel-0.5
+#make
+#sudo make install
+
+#wget http://fftw.org/fftw-3.3.9.tar.gz
+#tar -xzf fftw-3.3.9.tar.gz
+#cd fftw-3.3.9/
+#./configure --enable-float --enable-neon
+#make 
+#sudo make install
+
+#sudo apt-get install gettext cvs autopoint perl libexpat1-dev libxml-parser-perl --yes
+
+######## manually confirming necessary
+#perl -MCPAN -e shell
+#sudo cpan App::cpanminus
+#sudo cpanm XML::Parser
+
+#wget https://github.com/swh/ladspa/archive/refs/tags/v0.4.17.tar.gz
+#tar -xzf v0.4.17.tar.gz
+#cd ladspa-0.4.17/
+
+#autoreconf -i
+#./configure
+#make
+#sudo make install
+
+#sudo cp /usr/local/lib/ladspa/* /usr/lib/ladspa/
+
+sudo cp res/ladspa/* /usr/lib/ladspa/
 
 
 
 
-################git clone https://github.com/bmc0/dsp.git
-################cd dsp
 
+#
 sudo mkdir /etc/ladspa_dsp
 #sudo nano /etc/ladspa_dsp/config
 
