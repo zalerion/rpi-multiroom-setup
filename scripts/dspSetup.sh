@@ -52,9 +52,7 @@ if [ $dsp != yes ]; then exit 0; fi #dsp yes/no
 
 #sudo cp /usr/local/lib/ladspa/* /usr/lib/ladspa/
 
-sudo cp res/ladspa/* /usr/lib/ladspa/
-
-
+sudo cp -r res/ladspa /usr/lib
 
 
 
