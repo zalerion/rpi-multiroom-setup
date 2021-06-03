@@ -8,6 +8,7 @@ btl="no"	##setup the bluetooth receiver yes/no
 btlADV="no"	#Advanced
 spotify="no"	#setup spotify yes/no
 dsp="no"
+dspADV="no"
 hat="no"	# setup for hifiberry etc.
 
 echo "Choose your setup:"
@@ -68,8 +69,12 @@ fi
 
 	
 
-	read -p "Would you like to set up a dsp? [y/N] " REP
+	read -p "Would you like to set up basic (lightweight,ladspa) dsp? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dsp="yes"; fi
+	
+	
+#	read -p "Would you like to set up advanced dsp  [y/N] " REP
+#	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dspADV="yes"; fi
 	
 	read -p "Would you like to set use an Audio-Hat? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then hat="yes"; fi
@@ -84,4 +89,5 @@ spotify=$spotify	#setup spotify yes/no
 dsp=$dsp
 hat=$hat	# setup for hifiberry etc.
 btlADV=$btlADV
+dspADV=$dspADV
 EOM
