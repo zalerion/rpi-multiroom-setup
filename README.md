@@ -54,6 +54,10 @@ https://github.com/bmc0/dsp
 
 https://github.com/Arkq/bluez-alsa + dependencies
 
+https://lsp-plug.in/
+
+http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html
+
 ### Implemented
 * Setup of mdp
 * Setup as bluetooth receiver (including AAC and aptX)
