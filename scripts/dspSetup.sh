@@ -39,6 +39,12 @@ sudo apt-get install zam-plugins -y
 
 #sudo apt-get install gettext cvs autopoint perl libexpat1-dev libxml-parser-perl --yes
 
+
+#sudo apt-get install git automake build-essential libtool pkg-config python-docutils --yes 
+#sudo apt-get install libasound2-dev libbluetooth-dev libdbus-1-dev libglib2.0-dev libsbc-dev --yes 
+#sudo apt-get install cmake libavcodec-dev --yes
+#sudo apt-get install pandoc libncurses5-dev libbsd-dev libsndfile-dev doxygen --yes
+
 ######## manually confirming necessary
 #perl -MCPAN -e shell
 #sudo cpan App::cpanminus
