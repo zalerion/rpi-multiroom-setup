@@ -103,8 +103,10 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 ##dynamic eq uses sidechain, which is not put out:
 #remix 0 1 0,1 0,1
 #:2,3 gain -6
-#:0,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ
-#:1,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ
+###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf       deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
+#:0,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ    1.5     500     3       2       -10     10              -       0               -               0       -               2000    2000    2               1
+#:1,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ    1.5     500     3       2       -10     10              -       0               -               0       -               2000    2000    2               0
+
 
 
 # eq [Hz] [Q] [Gain] # parametric EQ
