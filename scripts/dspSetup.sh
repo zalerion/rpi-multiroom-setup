@@ -100,6 +100,13 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 #:0,2 ladspa_host lsp-plugins-ladspa http://lsp-plug.in/plugins/ladspa/mb_compressor_stereo 0 1 ####missing lots of parameters
 
 
+##dynamic eq uses sidechain, which is not put out:
+#remix 0 1 0,1 0,1
+#:2,3 gain -6
+#:0,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ
+#:1,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ
+
+
 # eq [Hz] [Q] [Gain] # parametric EQ
 # 
 #remix puts out:
