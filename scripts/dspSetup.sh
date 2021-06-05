@@ -11,7 +11,7 @@ if [ $dsp != yes ]; then exit 0; fi #dsp yes/no
 sudo apt-get install ladspa-sdk -y
 sudo apt-get install zam-plugins -y
 
-#sudo apt-get install autoconf fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev -y
+#sudo apt-get install autoconf libtool fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev -y
 
 #sudo wget https://github.com/bmc0/dsp/archive/master.zip
 #unzip master
@@ -40,7 +40,7 @@ sudo apt-get install zam-plugins -y
 #sudo apt-get install gettext cvs autopoint perl libexpat1-dev libxml-parser-perl --yes
 
 
-#sudo apt-get install git automake build-essential libtool pkg-config python-docutils --yes 
+#sudo apt-get install git automake build-essential pkg-config python-docutils --yes 
 #sudo apt-get install libasound2-dev libbluetooth-dev libdbus-1-dev libglib2.0-dev libsbc-dev --yes 
 #sudo apt-get install cmake libavcodec-dev --yes
 #sudo apt-get install pandoc libncurses5-dev libbsd-dev libsndfile-dev doxygen --yes
