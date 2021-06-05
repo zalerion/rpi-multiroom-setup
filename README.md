@@ -87,6 +87,7 @@ http://www.zamaudio.com/?p=976
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
+* services instead of daemons
 
 
 
