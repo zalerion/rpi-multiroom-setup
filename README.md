@@ -11,6 +11,11 @@ Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile 
 
 
 
+Everything is done rather lightweight, straightforward and modular. Only uses ALSA, no pulse, no jack or anything. Even with a full install, I think i never saw anything >4GB, so any modern SD Card will suffice, as will most older ones.
+DSP is done with ladspa and is directly hosted in ALSA, so it will be applied, no matter what the source.
+Any additional player can easily be added as multiroom source.
+
+
 
 Tested with the 2020-05-27-raspios-buster-lite-armhf image and as full setup.
 2020-08-20-raspios-buster-armhf-lite.img made some problems with bluetooth.
@@ -70,6 +75,7 @@ http://www.zamaudio.com/?p=976
 * Setup a spotify speaker
 * Setup for Hats: DAC and amps
 * for multiroom speakers: dsp e.g for active 2-way speaker
+* dsp with dynamic eq
 
 ### Planned
 * testing/setting up new ALSA audio grab for snapserver.
