@@ -85,7 +85,7 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 #remix 0 0 1 1
 #:0,2 lowpass_1 100
 #:1,3 highpass_1 120 gain -6
-#:0,2 ladspa_host sc4_1882.so sc4 - 1.5 - -20 3 - -  ######### compression
+#:0,2 ladspa_host sc4_1882.so sc4 - 1.5 - -20 3 - - 
 #remix 0,1 2,3
 
 ###############################
