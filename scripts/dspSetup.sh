@@ -9,6 +9,8 @@ if [ $dsp != yes ]; then exit 0; fi #dsp yes/no
 #sudo apt-get install build-essential -y
 #sudo apt-get install pkg-config -y 
 sudo apt-get install ladspa-sdk -y
+sudo apt-get install zam-plugins -y
+
 #sudo apt-get install fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev -y
 
 #sudo wget https://github.com/bmc0/dsp/archive/master.zip
