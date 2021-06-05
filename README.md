@@ -58,6 +58,8 @@ https://lsp-plug.in/
 
 http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html
 
+http://www.zamaudio.com/?p=976
+
 ### Implemented
 * Setup of mdp
 * Setup as bluetooth receiver (including AAC and aptX)
