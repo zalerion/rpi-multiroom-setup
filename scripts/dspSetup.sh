@@ -97,7 +97,6 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 #more extensive examples for inclúding aditional ladspa plugins
 #ladspa_host  /usr/lib/ladspa/vlevel-ladspa.so vlevel_stereo 2 0.8 - 15 -
 #ladspa_host filter lpf 1000
-#:0,2 ladspa_host lsp-plugins-ladspa http://lsp-plug.in/plugins/ladspa/mb_compressor_stereo 0 1 ####missing lots of parameters
 
 
 ###########dynamic eq uses sidechain, which is not put out:
