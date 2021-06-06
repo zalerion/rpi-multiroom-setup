@@ -100,7 +100,7 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 
 
 ###########dynamic eq uses sidechain, which is not put out:
-##
+## dyeq is cpu hungry. 4 on a PI 3 will not work
 # Example for a bass boost/cut, which only lets the differnce through
 ##
 #remix 0 1 0,1 0,1 0 1
