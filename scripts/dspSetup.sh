@@ -81,8 +81,7 @@ EOM
 
 cat  <<EOM > /etc/ladspa_dsp/eq.txt
 
-# This demonstrates a split of left and right in high and low channels, compresses the bass, and recombines them. Adapt for own use. (very basic setuop for multiband compression or adapted simulation of dynamic eqs
-
+# This demonstrates a split of left and right in high and low channels, compresses the bass, and recombines them. Adapt for own use. 
 #remix 0 0 1 1
 #:0,2 lowpass_1 100
 #:1,3 highpass_1 120 gain -6
