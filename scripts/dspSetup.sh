@@ -24,9 +24,10 @@ sudo apt-get install autoconf libtool fftw3 fftw3-dev libzita-convolver3 libzita
 #rm -rf dsp-master
 #rm -rf master.zip
 
-#wget https://pilotfiber.dl.sourceforge.net/project/vlevel/vlevel/0.5/vlevel-0.5.tar.gz
-#tar -xzf vlevel-0.5.tar.gz
-#cd vlevel-0.5
+#wget https://github.com/radiocicletta/vlevel/archive/refs/tags/v0.5.tar.gz
+#wget https://github.com/radiocicletta/vlevel/archive/refs/tags/v0.5.1.tar.gz
+#tar -xzf vlevel-0.5.1.tar.gz
+#cd vlevel-0.5.1
 #make
 #sudo make install
 
