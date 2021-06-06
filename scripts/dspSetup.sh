@@ -123,6 +123,8 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 #for tarwidtdh 5
 #:- eq 1000 4o +10 
 
+#:- lowshelf 8000 2.25o -10
+
 
 
 # eq [Hz] [Q] [Gain] # parametric EQ
