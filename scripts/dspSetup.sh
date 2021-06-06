@@ -125,3 +125,11 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 #remix 0,1 0,1 #mixes both channels back, stereo to mono
 #remix 1 0 #swaps channels
 EOM
+
+
+
+
+cat  <<EOM > /etc/ladspa_dsp/dyneq.txt
+###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf       deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
+ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ         15      500     4       2       -30     10              -       1               0               1       0               80      80      2               0
+EOM
