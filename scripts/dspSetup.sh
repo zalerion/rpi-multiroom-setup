@@ -113,6 +113,11 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 ############
 
 
+#remix 0 1 0,1 0,1
+#:0,2 @./dyneq.txt
+#:1,2 @./dyneq.txt
+
+
 # eq [Hz] [Q] [Gain] # parametric EQ
 # 
 #remix puts out:
