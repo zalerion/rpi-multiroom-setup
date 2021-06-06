@@ -101,21 +101,28 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 
 ###########dynamic eq uses sidechain, which is not put out:
 ## dyeq is cpu hungry. 4 on a PI 3 will not work
-# Example for a bass boost/cut, which only lets the differnce through
-##
-#remix 0 1 0,1 0,1 0 1
-#:2,3 gain -6
-###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf       deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
-#:0,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ    15      500     4       2       -30     10              -       1               0               1       0               80      80      3               1
-#:1,2 ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ    15      500     4       2       -30     10              -       1               0               1       0               80      80      3               0
-#:2,3 mult -1
-#remix 0,2 1,3
-############
-
-
 #remix 0 1 0,1 0,1
 #:0,2 @./dyneq.txt
 #:1,2 @./dyneq.txt
+
+#########################
+#rough values to counteract tarwidth. Makes it possible to get effect for lower instead of higher volumes
+#########################
+#for tarwidth 1
+#:- eq 1000 0.1o +10 
+
+#for tarwidtdh 2
+#:- eq 80 0.37o -10
+
+#for tarwidtdh 3
+#:- eq 1000 0.91o +10
+
+#for tarwidtdh 4
+#:- eq 1000 2.05o +10
+
+#for tarwidtdh 5
+#:- eq 1000 4o +10 
+
 
 
 # eq [Hz] [Q] [Gain] # parametric EQ
@@ -130,6 +137,6 @@ EOM
 
 
 cat  <<EOM > /etc/ladspa_dsp/dyneq.txt
-###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf       deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
-ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ         15      500     4       2       -30     10              -       1               0               1       0               80      80      2               0
+###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf(no function?) deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
+ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ         15      500     2       2       -30     10              -       1               0               1       0                       1000      80      2               0
 EOM
