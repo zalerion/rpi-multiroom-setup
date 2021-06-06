@@ -13,16 +13,16 @@ sudo apt-get install zam-plugins -y
 
 sudo apt-get install autoconf libtool fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev -y
 
-sudo wget https://github.com/bmc0/dsp/archive/master.zip
-unzip master
-cd dsp-master
+#sudo wget https://github.com/bmc0/dsp/archive/master.zip
+#unzip master
+#cd dsp-master
 
-make
-sudo make install
+#make
+#sudo make install
 
-cd ..
-rm -rf dsp-master
-rm -rf master.zip
+#cd ..
+#rm -rf dsp-master
+#rm -rf master.zip
 
 #wget https://pilotfiber.dl.sourceforge.net/project/vlevel/vlevel/0.5/vlevel-0.5.tar.gz
 #tar -xzf vlevel-0.5.tar.gz
