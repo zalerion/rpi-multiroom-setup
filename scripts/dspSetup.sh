@@ -100,7 +100,8 @@ cat  <<EOM > /etc/ladspa_dsp/eq.txt
 
 
 ###########dynamic eq uses sidechain, which is not put out:
-## dyeq is cpu hungry. 4 on a PI 3 will not work
+## dyneq (ZamDynamicEQ is cpu hungry. 4 instances on a PI 3 will not work
+## Pseudo DynEQ is harder to tune an requires spectrum analyzer to check the actual effects. But this is less cpu heavy
 #remix 0 1 0,1 0,1
 #:0,2 @./dyneq.txt
 #:1,2 @./dyneq.txt
@@ -140,5 +141,39 @@ EOM
 
 cat  <<EOM > /etc/ladspa_dsp/dyneq.txt
 ###################################################     Att     Rel     Knee    Ratio   Thresh  Max Boost/Cut   Slew    Sidechain       lowShelf        Peak    Highshelf(no function?) deFreq  tarFre  tarWidth        Boost(1)/Cut(0) ControlGain (not existing)
-ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ         15      500     2       2       -30     10              -       1               0               1       0                       1000      80      2               0
+#ladspa_host ZamDynamicEQ-ladspa.so ZamDynamicEQ         15      500     2       2       -30     10              -       1               0               1       0                       1000      80      2               0
+
+#################
+#Pseudo Dyn EQ
+#What happens:
+#signal is doubled. one is eqed. get difference (only the eq). compress difference when louder..
+# add compressed difference to original
+# higher volume -> heavily compressed, less loud eq channel -> will get insignificant (like -30dB) and barely noticeable.
+#
+# note: funny things can happen 
+#
+# ratio and threshold have to be adapted to gain and bandwidth of the eq to get neutral at certain point.
+# rule of thumb (at least for broader filters: threshold/ratio
+#################
+
+#####
+# example of rough dynamic loudness equalization oriented at hearing curves for ~30dB difference
+remix 0 1 0 1
+#:2,3 eq 8000 0.9o 20
+
+:2,3 highshelf 2000 0.7 15
+:2,3 lowshelf 800 0.7 30
+:2,3 mult -1
+remix 0 1 0,2 1,3
+
+:2,3 gain 0
+# gain +x (+y)
+:2,3 ladspa_host sc4_1882.so sc4 - 1.5 - -30 4 - -
+:2,3 gain 0
+# gain -x
+# combination of those to gains can pull the "no eq" point down from max, giving an area at the top withou eq instead only max volume
+:2,3 mult 1
+
+remix 0,2 1,3
+
 EOM
