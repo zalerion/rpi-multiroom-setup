@@ -1,0 +1,6 @@
+The files here are compiled (RPI 3, 2021-01-11-raspios-buster-armhf-lite) for convenience. It is just much faster this way. If there are problems the script to compile these is included in comments within the dsp setup script.
+All credit belongs to the magnificent people of the following projects:
+
+https://github.com/bmc0/dsp
+https://github.com/swh/ladspa
+https://github.com/radiocicletta/vlevel

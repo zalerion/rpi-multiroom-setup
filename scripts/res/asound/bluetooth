@@ -1,25 +1,28 @@
 
 ###########################################################################
+#Bluetooth setup for snapserver scenario. Redirects bluetooth audio from default to a snapserver pipe
 #
 #bluetooth comes in via default
 pcm.!default {
    type plug
-   slave.pcm rateConvert
+#   slave.pcm rateConvert
+   slave.pcm "hw:Loopback,0,0"
 }
-#################
-pcm.rateConvert {
-    type rate
-    slave {
-        pcm writeFile # Direct to the plugin which will write to a file
-        format S16_LE
-        rate 48000
-    }
-}
+#################       legacy fifo config in case alsa makes problems
+#pcm.rateConvert {
+#    type rate
+#    slave {
+#        pcm writeFile # Direct to the plugin which will write to a file
+#        format S16_LE
+#        rate 44100
+#    }
+#}
 ###############
-pcm.writeFile {
-        type file
-        slave.pcm null
-        file "/tmp/bluesnapfifo"
-        format "raw"
-}
+#pcm.writeFile {
+#        type file
+#
+#slave.pcm null
+#        file "/tmp/bluesnapfifo"
+#        format "raw"
+#}
 ###############################################################################$

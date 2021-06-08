@@ -5,9 +5,10 @@ mpd="no"	#setup mpd yes/no
 sclient="no" 	#setup of snapclient yes/no
 oclient="no" 	#option for "only only as client" setup
 btl="no"	##setup the bluetooth receiver yes/no
-btlADC="no"	#Advanced
+btlADV="no"	#Advanced
 spotify="no"	#setup spotify yes/no
 dsp="no"
+dspADV="no"
 hat="no"	# setup for hifiberry etc.
 
 echo "Choose your setup:"
@@ -51,7 +52,7 @@ elif [ $REP = "2" ];then
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
 	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; 
-		read -p "Would you like codec support aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+		read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
 		if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 	fi
 
@@ -62,16 +63,20 @@ elif [ $REP = "2" ];then
 
 elif [ $REP = "3" ];then
 	btl="yes"
-	read -p "Would you like codec support aptX? NOTE: This will take significantly longer to install! [y/N] " REP
+	read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 fi
 
 	
 
-	read -p "Would you like to set up a dsp? [y/N] " REP
+	read -p "Would you like to set up basic (lightweight,ladspa) dsp? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dsp="yes"; fi
 	
-	read -p "Would you like to set use an Audio-Hat? [y/N] " REP
+	
+#	read -p "Would you like to set up advanced dsp  [y/N] " REP
+#	if [[ $REP =~ ^(yes|y|Y)$ ]]; then dspADV="yes"; fi
+	
+	read -p "Would you like to setup the use of an Audio-Hat? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then hat="yes"; fi
 
 cat <<EOM > scripts/options.conf
@@ -83,4 +88,6 @@ btl=$btl	##setup the bluetooth receiver yes/no
 spotify=$spotify	#setup spotify yes/no
 dsp=$dsp
 hat=$hat	# setup for hifiberry etc.
+btlADV=$btlADV
+dspADV=$dspADV
 EOM

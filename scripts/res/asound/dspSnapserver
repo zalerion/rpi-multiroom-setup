@@ -1,0 +1,24 @@
+#snapclient audio sink in with dsp in case of running snapserver. Prevent collisions with inputs on default.
+pcm.snapclient {
+        type plug
+        slave {
+                format FLOAT
+                rate unchanged
+                pcm {
+                        type ladspa
+#                       channels 4
+                        path "/usr/lib/ladspa"
+                        playback_plugins [{
+                                label "ladspa_dsp"
+                        }]
+                        slave.pcm {
+                                type plug
+                                slave {
+                                        pcm "sysdefault:0"
+                                        rate unchanged
+                                        channels unchanged
+                                }
+                        }
+                }
+        }
+}

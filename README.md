@@ -1,7 +1,19 @@
+# 5.10 Kernel apparently buggy https://github.com/badaix/snapcast/issues/815 - dsp unusable for some sources
+will be testing for last functioning version
+
+2021-01-11-raspios-buster-armhf-lite has no obvious problems
+
+https://downloads.raspberrypi.org/raspios_lite_armhf/images/
+
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
 Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
 
+
+
+Everything is done rather lightweight, straightforward and modular. Only uses ALSA, no pulse, no jack or anything. Even with a full install, I think i never saw anything >4GB, so any modern SD Card will suffice, as will most older ones.
+DSP is done with ladspa and is directly hosted in ALSA, so it will be applied, no matter what the source.
+Any additional player can easily be added as multiroom source.
 
 
 
@@ -47,6 +59,10 @@ https://github.com/bmc0/dsp
 
 https://github.com/Arkq/bluez-alsa + dependencies
 
+http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html
+
+http://www.zamaudio.com/?p=976
+
 ### Implemented
 * Setup of mdp
 * Setup as bluetooth receiver (including AAC and aptX)
@@ -57,6 +73,7 @@ https://github.com/Arkq/bluez-alsa + dependencies
 * Setup a spotify speaker
 * Setup for Hats: DAC and amps
 * for multiroom speakers: dsp e.g for active 2-way speaker
+* dsp with dynamic eq
 
 ### Planned
 * testing/setting up new ALSA audio grab for snapserver.
@@ -68,6 +85,7 @@ https://github.com/Arkq/bluez-alsa + dependencies
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
+* services instead of daemons
 
 
 
