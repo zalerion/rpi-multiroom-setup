@@ -7,8 +7,9 @@
         pcm.snapclient
         {
                 type plug;
-                slave.pcm "sysdefault:0";
+#                slave.pcm "sysdefault:0";
 #                slave.pcm "sysdefault:1";
-#Might need to be changed for Pi 4, depending on audio setup
+                slave.pcm "sysdefault:2";
+#Might need to be changed, depending on audio setup
         }
 ###############################################################################
