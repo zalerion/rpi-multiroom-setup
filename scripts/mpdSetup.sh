@@ -55,7 +55,7 @@ if [ "$server" = "yes" ]; then
 	path            "/tmp/fifo$i"
 EOM
 ########################################
-		echo "port                            \"$((6600+$i))\"" > ./res/mpd/4_port
+		echo "port                            \"$((6601+$i))\"" > ./res/mpd/4_port
 		echo "state_file                     \"/var/lib/mpd/state$i\"" > ./res/mpd/2_state
 
 # put specified mpd in autostart
@@ -81,8 +81,8 @@ EOM
 fi
 
 if [ $mpd = "1" ]; then 
-	read -p "Your MPD server uses the standard port of 6600 [OK/OK]" dump
+	read -p "Your MPD server uses the standard port of 6601 [OK/OK]" dump
 else
-	read -p "Ports range from 6600 to $((6600-1+$mpd)) [OK/OK]" dump
+	read -p "Ports range from 6601 to $((6601-1+$mpd)) [OK/OK]" dump
 fi
 
