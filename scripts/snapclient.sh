@@ -30,7 +30,6 @@ if [[ ! $server =~ ^(yes|y|Y)$ ]]; then exit 0; fi
 #echo "snapclient -s snapclient &" >> /etc/autostart.sh
 
 cat <<EOM > /etc/default/snapclient
-
 # Start the client, used only by the init.d script
 START_SNAPCLIENT=true
 
