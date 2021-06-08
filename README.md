@@ -75,6 +75,7 @@ http://www.zamaudio.com/?p=976
 * for multiroom speakers: dsp e.g for active 2-way speaker
 * dsp with dynamic eq
 * testing/setting up new ALSA audio grab for snapserver.
+* services instead of daemons
 
 ### Planned
 * rounting BT not through default...
@@ -85,7 +86,6 @@ http://www.zamaudio.com/?p=976
 * setup automatic reboot
 * add choices for samplerate
 * add choice for mopidy instead of mpd
-* services instead of daemons
 
 
 
