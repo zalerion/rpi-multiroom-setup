@@ -13,7 +13,7 @@ read -p "Change later if needed. [OK/Enter]" dump
 # set paths, unloch bind to addrss, activate non default port, set permissions
 
 echo
-echo "Replay gain is recommended for general background music. Do not use for classical. Will be set for all MPD servers. You can easily configure this later by hand."
+echo "Replay gain is recommended for general background music. Do not use for classical. Will be set for all MPD servers. You can easily configure this later by hand. Generell recommendation: album"
 echo
 echo "Please note: You will have to have the files tagged before replay gain takes effect. This can be done e.g with foobar."
 echo
@@ -34,15 +34,23 @@ fi
 #needed later for orientation
 echo 
 
+
+
 if [ "$server" = "yes" ]; then
+	#locale single mpd instance can use standard config. For server special config is needed.
+	sudo systemctl stop mpd
+	sudo systemctl disable mpd
+	
 
 	echo "Each stream has a name that will show up in the snapcast control"
+	cd ./res/mpd
         for i in `seq 0 "$(($mpd-1))"`;
         do
 		read -p "Please enter the name for stream Number $i:" name
+		
 		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> ./res/snapserver/2_streams
 #######################################
-		cat  <<EOM > ./res/mpd/6_fifo
+		cat  <<EOM > 6_fifo
 	name            "$name"
 	path            "/tmp/fifo$i"
 EOM
@@ -52,13 +60,23 @@ EOM
 
 # put specified mpd in autostart
 		path="/etc/mpd$i.conf" #path to new mpdX.conf file
-		cd ./res/mpd
+		
 		cat 1 2_state 3 4_port 5 6_fifo 7 8_rpgain 9 > $path
-		echo "sudo mpd $path" >> /etc/autostart.sh
-		cd ..
-		cd ..
+
+# older daemons. now services
+#		echo "sudo mpd $path" >> /etc/autostart.sh
+
+		echo "ExecStart=/usr/bin/mpd --no-daemon $path" > service_2
+		
+		servicepath="/lib/systemd/system/mpd$i.service"
+		cat service_1 service_2 service_3 > $servicepath
+		
+		sudo systemctl enable mpd$i
+
         done
 
+	cd ..
+	cd ..
 #cleanup
 fi
 
