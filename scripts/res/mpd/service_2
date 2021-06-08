@@ -1,0 +1,1 @@
+ExecStart=/usr/bin/mpd --no-daemon /etc/mpd0.conf
