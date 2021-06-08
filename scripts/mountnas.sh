@@ -38,6 +38,6 @@ rm tmpfile
 
 sudo cat  <<EOM > /etc/playlistBackup.sh
 	sudo mkdir -p /mnt/share/Playlists/"Backup_Playlists_\$(date +"%Y_%m_%d")"
-	sudo cp /var/lib/mpd/playlists/* /mnt/share/Playlists/"Backup_Playlists_\$(date +"%Y_%m_%d")"
+	sudo cp /mnt/share/Playlists/Playlists* /mnt/share/Playlists/"Backup_Playlists_\$(date +"%Y_%m_%d")"
 EOM
 sudo chmod 755 /etc/playlistBackup.sh
