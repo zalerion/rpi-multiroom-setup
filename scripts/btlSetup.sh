@@ -2,7 +2,10 @@
 source options.conf
 
 if [[ ! $btl =~ (yes|y|Y) ]]; then exit 0; fi
-eco "sudo modprobe snd-aloop" >> /etc/autostart.sh 
+#echo "sudo modprobe snd-aloop" >> /etc/autostart.sh 
+### load loopback
+echo "snd_aloop" > /etc/modules-load.d/snd_aloop.conf
+
 echo "sleep 3" >> /etc/autostart.sh 
 echo "sudo hciconfig hci0 reset" >> /etc/autostart.sh 
 
