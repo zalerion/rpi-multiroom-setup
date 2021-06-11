@@ -18,14 +18,12 @@ echo
 echo "Please note: You will have to have the files tagged before replay gain takes effect. This can be done e.g with foobar."
 echo
 
-cd ./res
-
 read -p "Do you want to use replay gain by track, by album or not at all? [track/album/No] " REPLY
 if [[ "$REPLY" =~ ^(track|album)$ ]];
 then
-	echo "replaygain                      \"$REPLY\"" > mpd/8_rpgain
+	echo "replaygain                      \"$REPLY\"" > res/mpd/8_rpgain
 else
-        echo "#replaygain                      \"no\"" > mpd/8_rpgain
+        echo "#replaygain                      \"no\"" > res/mpd/8_rpgain
 fi
 
 
@@ -51,14 +49,14 @@ if [ "$server" = "yes" ]; then
         do
 		read -p "Please enter the name for stream Number $i:" name
 		
-		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> snapserver/2_streams
+		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> res/snapserver/2_streams
 #######################################
-		cat  <<EOM > mpd/6_fifo
+		cat  <<EOM > res/mpd/6_fifo
 	name            "$name"
 	path            "/tmp/fifo$i"
 EOM
 ########################################
-cd mpd
+cd mpd/res
 		echo "port                            \"$((6600+$i))\"" > 4_port
 		echo "state_file                     \"/var/lib/mpd/state$i\"" > 2_state
 
