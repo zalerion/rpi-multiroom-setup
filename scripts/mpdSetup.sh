@@ -17,12 +17,15 @@ echo "Replay gain is recommended for general background music. Do not use for cl
 echo
 echo "Please note: You will have to have the files tagged before replay gain takes effect. This can be done e.g with foobar."
 echo
+
+cd ./res
+
 read -p "Do you want to use replay gain by track, by album or not at all? [track/album/No] " REPLY
 if [[ "$REPLY" =~ ^(track|album)$ ]];
 then
-	echo "replaygain                      \"$REPLY\"" > ./res/mpd/8_rpgain
+	echo "replaygain                      \"$REPLY\"" > mpd/8_rpgain
 else
-        echo "#replaygain                      \"no\"" > ./res/mpd/8_rpgain
+        echo "#replaygain                      \"no\"" > mpd/8_rpgain
 fi
 
 
@@ -43,20 +46,21 @@ if [ "$server" = "yes" ]; then
 	
 
 	echo "Each stream has a name that will show up in the snapcast control"
-	cd ./res/mpd
+
         for i in `seq 1 "$(($mpd))"`;
         do
 		read -p "Please enter the name for stream Number $i:" name
 		
-		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> ./res/snapserver/2_streams
+		echo "stream = pipe:///tmp/fifo$i?name=$name&mode=read" >> snapserver/2_streams
 #######################################
-		cat  <<EOM > 6_fifo
+		cat  <<EOM > mpd/6_fifo
 	name            "$name"
 	path            "/tmp/fifo$i"
 EOM
 ########################################
-		echo "port                            \"$((6600+$i))\"" > ./res/mpd/4_port
-		echo "state_file                     \"/var/lib/mpd/state$i\"" > ./res/mpd/2_state
+cd mpd
+		echo "port                            \"$((6600+$i))\"" > 4_port
+		echo "state_file                     \"/var/lib/mpd/state$i\"" > 2_state
 
 # put specified mpd in autostart
 		path="/etc/mpd$i.conf" #path to new mpdX.conf file
