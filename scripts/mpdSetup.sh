@@ -56,7 +56,7 @@ if [ "$server" = "yes" ]; then
 	path            "/tmp/fifo$i"
 EOM
 ########################################
-cd mpd/res
+cd res/mpd
 		echo "port                            \"$((6600+$i))\"" > 4_port
 		echo "state_file                     \"/var/lib/mpd/state$i\"" > 2_state
 
@@ -75,10 +75,10 @@ cd mpd/res
 		
 		sudo systemctl enable mpd$i
 
+	cd ..
+	cd ..
         done
 
-	cd ..
-	cd ..
 #cleanup
 fi
 
