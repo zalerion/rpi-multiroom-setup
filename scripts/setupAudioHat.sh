@@ -65,7 +65,7 @@ EOM
 
 echo "Choose your Hat:"
 echo
-echo "[1] Hifiberry Miniamp, Hifiberry DAC"
+echo "[1] Hifiberry Miniamp, Hifiberry DAC, Beocreate"
 echo "[2] Hifiberry Amp2"
 echo "[3] IQAudio DAC+, DAC Pro"
 echo "[4] DigiAMP+"
