@@ -14,7 +14,7 @@ hat="no"	# setup for hifiberry etc.
 echo "Choose your setup:"
 echo
 echo "[1] Multiroom Speaker (snapclient, dsp and hats)"
-echo "[2] Audio Server (select for local server/receiver or multiroom server setups. All options are available here) "
+echo "[2] Audio Server (select for local server/receiver or multiroom server setups.) "
 echo "[3] Mobile Box (just bluetooth, dsp and hats)"
 echo
 read -p "Please choose this systems general purpose [1/2/3]" REP
