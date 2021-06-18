@@ -5,6 +5,9 @@ will be testing for last functioning version
 
 https://downloads.raspberrypi.org/raspios_lite_armhf/images/
 
+
+pi 4 has some problems with bluetooth....
+
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
 Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
