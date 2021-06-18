@@ -1,7 +1,7 @@
 # 5.10 Kernel apparently buggy https://github.com/badaix/snapcast/issues/815 - dsp unusable for some sources
 will be testing for last functioning version
 
-2021-01-11-raspios-buster-armhf-lite has no obvious problems
+2021-01-11-raspios-buster-armhf-lite seems to work on pi 3. Pi 4 has broken bluetooth....
 
 https://downloads.raspberrypi.org/raspios_lite_armhf/images/
 
