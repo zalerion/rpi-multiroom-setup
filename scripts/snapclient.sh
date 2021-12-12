@@ -15,8 +15,13 @@ sudo dpkg -i snapclient_0.25.0-1_armhf.deb
 
 echo "Updating dependencies and removing downloaded files"
 sudo apt-get -f install --yes
+sudo apt -f install --yes
+
 sudo apt-get update
+sudo apt update
+
 sudo apt-get -f install --yes
+sudo apt -f install --yes
 #sudo apt-get upgrade --yes
 rm snapclient_0.25.0-1_armhf.deb
 
