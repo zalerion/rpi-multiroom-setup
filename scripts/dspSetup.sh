@@ -13,6 +13,9 @@ sudo apt-get install zam-plugins -y
 
 sudo apt-get install autoconf libtool fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev -y
 
+sudo apt update
+sudo apt install autoconf libtool fftw3 fftw3-dev libzita-convolver3 libzita-convolver-dev libsndfile1 libsndfile1-dev libavcodec-dev libavformat-dev libasound2-dev libao-common libao-dev libmad0-dev zam-plugins ladspa-sdk pkg-config build-essential -y
+
 #sudo wget https://github.com/bmc0/dsp/archive/master.zip
 #unzip master
 #cd dsp-master
