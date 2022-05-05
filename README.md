@@ -5,6 +5,8 @@ Got no time to fix it :(
 
 https://github.com/Daenou/ansible-multiroom-audio/issues/18
 
+HDMI doesn't show up in Bullseye, Buster legacy seems to work better.
+
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
 Simplifies the extensive setup of a raspberry pi for audio use. Includes mobile speaker multiroom system and music server. 
