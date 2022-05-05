@@ -7,9 +7,11 @@ https://github.com/Daenou/ansible-multiroom-audio/issues/18
 
 HDMI doesn't show up in Bullseye, Buster legacy seems to work better.
 https://www.reddit.com/r/raspberry_pi/comments/qujijj/no_hdmi_audio_in_raspiconfig_raspberry_os_lite/
+https://forums.raspberrypi.com/viewtopic.php?t=324067
 
 Buster packages are not up to date:
 https://raspberrytips.com/update-raspberry-pi-latest-version/
+raspotify doesn't install anymore...
 
 
 # rpi-multiroom-setup
