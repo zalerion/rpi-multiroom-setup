@@ -1,12 +1,9 @@
-# 5.10 Kernel apparently buggy https://github.com/badaix/snapcast/issues/815 - dsp unusable for some sources
-will be testing for last functioning version
+# Bluetooth is broken
 
-2021-01-11-raspios-buster-armhf-lite seems to work on pi 3.
+everything shiny and new and broken.
+Got no time to fix it :(
 
-https://downloads.raspberrypi.org/raspios_lite_armhf/images/
-
-
-pi 4 has some problems with bluetooth....
+https://github.com/Daenou/ansible-multiroom-audio/issues/18
 
 # rpi-multiroom-setup
 Started as multiroom project. Became more of an general purpose audio setup.
