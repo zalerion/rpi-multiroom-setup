@@ -32,7 +32,7 @@ echo
 echo
 
 sudo apt-get update > /dev/null
-sudo apt-get install git automake build-essential libtool pkg-config python-docutils --yes 
+sudo apt-get install git automake build-essential libtool pkg-config python3-docutils --yes 
 sudo apt-get install libasound2-dev libbluetooth-dev libdbus-1-dev libglib2.0-dev libsbc-dev --yes 
 sudo apt-get install cmake libavcodec-dev --yes
 sudo apt-get install pandoc libncurses5-dev libbsd-dev libsndfile-dev doxygen --yes
