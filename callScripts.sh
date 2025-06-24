@@ -4,7 +4,7 @@ sudo rm /etc/asound.conf
 ##starting with clean asound.conf
 
 
-sudo  rpi-audio-receiver-master/hostnames.sh
+# sudo  rpi-audio-receiver-master/hostnames.sh
 sudo ./setupAudioHat.sh $hat
 sudo ./autostartSetup.sh
 sudo ./mountnas.sh $oclient $mpd
