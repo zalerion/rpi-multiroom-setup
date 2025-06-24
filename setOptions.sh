@@ -52,8 +52,8 @@ elif [ $REP = "2" ];then
 	echo "Thanks to nico kaiser for providing his rpi-audio-receiver scripts!"
 	read -p "Do you want to setup the bluetooth receiver? [y/N] " REP
 	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btl="yes"; 
-		read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
-		if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
+		# read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
+		# if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 	fi
 
 
@@ -62,9 +62,9 @@ elif [ $REP = "2" ];then
 
 
 elif [ $REP = "3" ];then
-	btl="yes"
-	read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
-	if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
+	# btl="yes"
+	# read -p "Would you like more codec support? NOTE: This will take significantly longer to install! [y/N] " REP
+	# if [[ $REP =~ ^(yes|y|Y)$ ]]; then btlADV="yes"; fi
 fi
 
 	
