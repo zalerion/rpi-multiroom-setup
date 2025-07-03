@@ -18,7 +18,7 @@ sudo chmod 755 asoundConf.sh
 sudo chmod 755 setupAudioHat.sh
 sudo chmod 755 dspSetup.sh
 
-cd rpi-audio-receiver-master
+cd rpi-audio-receiver-main
 sudo chmod 755 hostnames.sh
 sudo chmod 755 install-bluetooth.sh
 sudo chmod 755 install-startup-sound.sh
